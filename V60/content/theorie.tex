@@ -95,7 +95,53 @@ Das in der Abbildung \ref{pic:gain} zu sehende Maximum der Kurve des Mediums, l�
 Diese Photonen haben die zu der Wellenlänge $\lambda_0$ gehörende Energie, welche der Bandlücke entspricht. 
 Da die Bandstruktur jedoch kontinuierlicher und nicht diskreter Natur ist, ist das Maximum ein sehr breites Maximum.
 Die Periodizität des internen und externen Resonators lässt sich mit der Bedingung \ref{eqn:lambda} erklären, da nur Wellen mit einer am Rand verschwindenden Amplitude zur Leistung stark beitragen.
-Die höhere Frequenz der Kurve von dem externen Resonator in Abbildung \ref{pic:gain} lässt sich ebenfalls mittels \ref{eqn:lambda} erklären, da die 
+Die höhere Frequenz der Kurve von dem externen Resonator in Abbildung \ref{pic:gain} lässt sich ebenfalls mittels \ref{eqn:lambda} erklären, da die Frequenz antiproportional zu der Länge des Resonators ist. 
+Die Moden des internen Resonators, sowie die zusammengefügten Moden des Gitters und des externen Resonators sind in Abbildung \ref{pic:moden}
+dargestellt. 
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.78\textwidth]{pictures/Moden.png}
+    \caption{Moden des internen und externen Resonators (externer Resonator mit Gittereinfluss) \cite{theorie}}
+    \label{pic:moden}
+\end{figure}
+Da der Laser sich in der Mode mit der meisten Gesamtleistung befindet, wird in Abbildung \ref{pic:moden} die Mode
+im zweiten Maximum des internen Resonators bevorzugt. Wird jedoch das Gitter gedreht kommt es zu einer verschiebung
+der externen Moden. Dadurch kann es zu einem Modensprung kommen, da eine andere Mode eine höhere Leistung bringt.
+Da diese Modensprünge zu Wellenlängenveränderungen führen wird der Laser so justiert, dass er nur in einer Mode läuft.
  
 \subsection{Einflüsse auf die Wellenlänge}
-\subsubsection{Temperatur}
+Die Wellenlänge des emittierten Laserlichts ist abhängig von der Ausrichtung des Gitters, der Temperatur des Lasers und
+der Stromstärke. Durch drehen des Gitters wird die Wellenlänge des Lasers nach der
+Bragg-Bedingung selektiert. Durch erhitzen des Lasers verringert sich die Bandlücke
+und somit wird die Wellenlänge des emittierten Strahls größer. Zudem wird durch die
+Temperatur der Brechungsindex des Mediums beeinflusst, wodurch sich das Modenspektrum verändert.
+Die Temperaturabhängigkeit der Wellenlänge ist in Abbildung \ref{pic:temp} dargestellt.
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.78\textwidth]{pictures/tempzuwell.png}
+    \caption{Wellenlänge des Lasers in Abhängigkeit von der Temperatur der Laserdiode\cite{theorie}}
+    \label{pic:temp}
+\end{figure}
+Eine Erhöhung der Stromstärke führt zu einer erhitzung der Laserdiode, welche
+wie zuvor erwähnt die Wellenlänge erhöht. Außerdem wird durch eine veränderung der Stromstärke
+die Ladungsträgerkonzentration in dem aktiven Medium verändert.
+Zu sehen ist die Kombination der beiden Effekte in Abbildung \ref{pic:cur}.
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.78\textwidth]{pictures/Current.png}
+    \caption{Abhängigkeit der Wellenlänge von dem Pump-Strom\cite{theorie}}
+    \label{pic:cur}
+\end{figure}
+
+\subsection{Transmissionsspektrum von Rubidium}
+Im Versuch werden die Absorptionslinien von zwei Rubidium Isotopen untersucht.
+Dafür sind die Energielevel auf der linken Seite der Abbildung \ref{pic:energie}
+dargestellt. Auf der rechten Seite der Abbildung sind die Absorptionslinien 
+von Rubidium dargestellt. Beim Vergleich der Energien beziehungsweise der Frequenzen,
+können die Peaks jeweils einem Übergang zugeordnet werden.
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.78\textwidth]{pictures/energielevel.png}
+    \caption{Übergänge von Rubidiumisotopen\cite{anleitung}}
+    \label{pic:energie}
+\end{figure}
