@@ -1,0 +1,121 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{theorie}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=2821a70f99517ac7757c95300d43e95c}{%
+           family={Dortmund},
+           familyi={D\bibinitperiod},
+           given={TU},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{2821a70f99517ac7757c95300d43e95c}
+      \strng{fullhash}{2821a70f99517ac7757c95300d43e95c}
+      \strng{bibnamehash}{2821a70f99517ac7757c95300d43e95c}
+      \strng{authorbibnamehash}{2821a70f99517ac7757c95300d43e95c}
+      \strng{authornamehash}{2821a70f99517ac7757c95300d43e95c}
+      \strng{authorfullhash}{2821a70f99517ac7757c95300d43e95c}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Diode Laser Physics}
+      \field{year}{2022}
+    \endentry
+    \entry{p-n-uebergang}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7f7740ac0a63610b3e8e5eefea414a1c}{%
+           family={enargus},
+           familyi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f7740ac0a63610b3e8e5eefea414a1c}
+      \strng{fullhash}{7f7740ac0a63610b3e8e5eefea414a1c}
+      \strng{bibnamehash}{7f7740ac0a63610b3e8e5eefea414a1c}
+      \strng{authorbibnamehash}{7f7740ac0a63610b3e8e5eefea414a1c}
+      \strng{authornamehash}{7f7740ac0a63610b3e8e5eefea414a1c}
+      \strng{authorfullhash}{7f7740ac0a63610b3e8e5eefea414a1c}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{p-n-Übergang}
+      \field{urlday}{11}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.enargus.de/pub/bscw.cgi/d14511-2/*/*/p-n-%c3%9cbergang.html?op=Wiki.getwiki
+      \endverb
+      \verb{url}
+      \verb https://www.enargus.de/pub/bscw.cgi/d14511-2/*/*/p-n-%c3%9cbergang.html?op=Wiki.getwiki
+      \endverb
+    \endentry
+    \entry{anleitung}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=8de1df22eaf229e362df6cf3f2c0eebc}{%
+           family={Spin},
+           familyi={S\bibinitperiod},
+           given={Teach},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{8de1df22eaf229e362df6cf3f2c0eebc}
+      \strng{fullhash}{8de1df22eaf229e362df6cf3f2c0eebc}
+      \strng{bibnamehash}{8de1df22eaf229e362df6cf3f2c0eebc}
+      \strng{authorbibnamehash}{8de1df22eaf229e362df6cf3f2c0eebc}
+      \strng{authornamehash}{8de1df22eaf229e362df6cf3f2c0eebc}
+      \strng{authorfullhash}{8de1df22eaf229e362df6cf3f2c0eebc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Diode Laser Spectroscopy}
+      \field{year}{2022}
+    \endentry
+    \entry{kruemmung}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0c6ddeb720141ec11bd2e02656060d57}{%
+           family={Stiny},
+           familyi={S\bibinitperiod},
+           given={Leonhard},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Vieweg}%
+      }
+      \strng{namehash}{0c6ddeb720141ec11bd2e02656060d57}
+      \strng{fullhash}{0c6ddeb720141ec11bd2e02656060d57}
+      \strng{bibnamehash}{0c6ddeb720141ec11bd2e02656060d57}
+      \strng{authorbibnamehash}{0c6ddeb720141ec11bd2e02656060d57}
+      \strng{authornamehash}{0c6ddeb720141ec11bd2e02656060d57}
+      \strng{authorfullhash}{0c6ddeb720141ec11bd2e02656060d57}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783658091521}
+      \field{subtitle}{Aufbau, Struktur, Wirkungsweise, Eigenschaften und praktischer Einsatz diskreter und integrierter Halbleiter-Bauteile, 2. Auflage}
+      \field{title}{Aktive elektronische Bauelemente}
+      \field{year}{2015}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
