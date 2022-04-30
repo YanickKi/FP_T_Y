@@ -9,5 +9,4 @@ A = [68.343, 68.941, 67.243, 69.802, 67.171, 60.133, 68.438, 66.674, 66.920, 54.
 theta = np.arccos(0.5*np.cos(np.deg2rad(alpha))-0.5)
 
 plt.polar(theta, A)
-
 plt.savefig('build/hvarangle37.pdf')

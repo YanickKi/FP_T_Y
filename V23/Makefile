@@ -43,7 +43,7 @@ build/2c1b10.pdf: data_scripts/scripts/2c1b10.py matplotlibrc header-matplotlib.
 build/2c1b16.pdf: data_scripts/scripts/2c1b16.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/scripts/2c1b16.py
 
-build/10c910.pdf: data_scripts/scripts/10c9b10.py matplotlibrc header-matplotlib.tex | build
+build/10c9b10.pdf: data_scripts/scripts/10c9b10.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/scripts/10c9b10.py
 
 build/10c9b16.pdf: data_scripts/scripts/10c9b16.py matplotlibrc header-matplotlib.tex | build
@@ -66,8 +66,12 @@ build/50single.pdf: data_scripts/scripts/50single.py matplotlibrc header-matplot
 
 build/75single.pdf: data_scripts/scripts/75single.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/scripts/75single.py
+
+build/1316.pdf: data_scripts/scripts/1316.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/scripts/1316.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/hangle.pdf build/hvarangle27.pdf build/hvarangle37.pdf build/hvarangle74.pdf build/hvarangle86.pdf build/h3ring.pdf build/h6ring.pdf build/h9ring.pdf build/h2dia.pdf build/h2varangle.pdf build/2c1b.pdf build/10c9b.pdf build/2c1b10.pdf build/2c1b16.pdf build/10c9b10.pdf build/10c9b16.pdf build/10c9b75.pdf build/10c9b375.pdf build/10c9b625.pdf build/5075.pdf build/50single.pdf build/75single.pdf
+build/main.pdf: build/hangle.pdf build/hvarangle27.pdf build/hvarangle37.pdf build/hvarangle74.pdf build/hvarangle86.pdf build/h3ring.pdf build/h6ring.pdf build/h9ring.pdf build/h2dia.pdf build/h2varangle.pdf build/2c1b.pdf build/10c9b.pdf build/2c1b10.pdf build/2c1b16.pdf build/10c9b10.pdf build/10c9b16.pdf build/10c9b75.pdf build/10c9b375.pdf build/10c9b625.pdf build/5075.pdf build/50single.pdf build/75single.pdf build/1316.pdf
    
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

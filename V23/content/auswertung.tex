@@ -1,8 +1,8 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-\subsection{Frequenzspektrum von Zylindern verschiedener Länge}
+\subsection{Vorbereitendes Experiment}
 Um Redundanz zu vermeiden sind statt alle zwölf nur die Frequenzspektren, wo der Zylinder die Länge $\qty{50}{\milli\meter}$ und $\qty{600}{\milli\meter}$ hat, in der Abbildung
-\ref{fig:einfuehrung}
+\ref{fig:os} aufgeführt.
 \begin{figure}
 \begin{subfigure}{0.48\textwidth}%
 \centering%
@@ -17,177 +17,209 @@ Um Redundanz zu vermeiden sind statt alle zwölf nur die Frequenzspektren, wo de
 \caption{Frequenzspektrum eines Zylinders mit der Länge $\qty{600}{\milli\meter}$}%
 \label{fig:600os}%
 \end{subfigure}%
-\caption{Die Frequenzspektren von Zylindern mit jeweils $\qty{50}{\milli\meter}$ und $\qty{50}{\milli\meter}$, um die Frequenzspektren anderer Länge zu repräsentieren}%
+\caption{Die Frequenzspektren von Zylindern mit jeweils $\qty{50}{\milli\meter}$ und $\qty{600}{\milli\meter}$, um die Frequenzspektren anderer Länge zu repräsentieren.}%
 \label{fig:os}%
 \end{figure}%
-\subsection{Winkelabhängigkeit bei dem Wasserstoffatom}
+
+
+\subsection{Wasserstoffatom}
+Um die Polarplots mit den Kugelflächenfunktionen zu vergleichen, wurden die Darstellungen dieser \cite{sphericalharmonics} entnommen.
+
+\subsubsection{Hochaufgelöstes Frequenzspektrum bei einem Winkel}
 \begin{figure}
     \centering
     \includegraphics{build/hangle.pdf}
     \caption{Frequenzspektrum bei $\alpha = \ang{180}$}
-    \label{pic:hangle}
+    \label{fig:hangle}
 \end{figure}
-\subsection{Winkelabhängigkeit des Wasserstoffatoms}
+\FloatBarrier
+In der Abbildung \ref{fig:600os} wird ersichtlich, dass sich die Peaks in der Abbildung \ref{fig:50os} zu mehreren kleineren Peaks aufspalten.
+
+\subsubsection{Amplituden in Abhängigkeit des Winkels bei Resonanzfrequenzen}
+In der Abbildung \ref{fig:hvarangle27} ist die Amplitude bei der Resonanzfrequenz $\omega = \qty{2.3}{\kilo\hertz}$, in Abbildung \ref{fig:hvarangle37} bei
+$\omega = \qty{3.7}{\kilo\hertz}$, in Abbildung \ref{fig:hvarangle74} $\omega = \qty{2.3}{\kilo\hertz}$ und in Abbildung \ref{fig:hvarangle86} in Abhängigkeit 
+des Winkels $\theta$ in einem Polarplot aufgetragen.
+Der Winkel $\theta$ entspricht dabei nicht mit gemessenen Winkel $\alpha$. Zwischen den beiden Winkeln gilt die Beziehung 
+\begin{equation}
+    \theta = \arccos \left ( \frac{1}{2} \cos \left ( \alpha \right ) - \frac{1}{2} \right) \; {.}
+\end{equation}
 \begin{figure}
     \centering
     \includegraphics{build/hvarangle27.pdf}
-    \caption{Polarplot des Peaks bei $\qty{2.3}{\kilo\hertz}$}
-    \label{pic:hvarangle27}
+    \caption{Polarplot des Peaks bei $\qty{2.3}{\kilo\hertz}$. Dies entspricht der Kugelflächenfunktion $Y_1^0$.}
+    \label{fig:hvarangle27}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics{build/hvarangle37.pdf}
-    \caption{Polarplot des Peaks bei $\qty{3.7}{\kilo\hertz}$}
-    \label{pic:hvarangle37}
+    \caption{Polarplot des Peaks bei $\qty{3.7}{\kilo\hertz}$. Dies entspricht der Kugelflächenfunktion $Y_2^0$.}
+    \label{fig:hvarangle37}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics{build/hvarangle74.pdf}
-    \caption{Polarplot des Peaks bei $\qty{7.4}{\kilo\hertz}$}
-    \label{pic:hvarangle74}
+    \caption{Polarplot des Peaks bei $\qty{7.4}{\kilo\hertz}$. Dies entspricht der Kugelflächenfunktion $Y_3^0$.}
+    \label{fig:hvarangle74}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics{build/hvarangle86.pdf}
-    \caption{Polarplot des Peaks bei $\qty{8.62}{\kilo\hertz}$}
-    \label{pic:hvarangle86}
+    \caption{Polarplot des Peaks bei $\qty{8.62}{\kilo\hertz}$. Dies entspricht der Kugelflächenfunktion $Y_4^0$.}
+    \label{fig:hvarangle86}
 \end{figure}
-\subsection{Zwischenringe bei dem Wasserstoffatom}
+\FloatBarrier
+
+\subsubsection{Frequenzspektren bei Symmetriebrechung}
 \begin{figure}
     \centering
     \includegraphics{build/h3ring.pdf}
-    \caption{Frequenzspektrum des Wasserstoffatoms bei $\alpha = \ang{180}$ mit einem Zwischenring der Dicke $\qty{3}{\milli\meter}$}
-    \label{pic:h3ring}
+    \caption{Frequenzspektrum des Wasserstoffatoms bei $\alpha = \ang{180}$ mit einem Zwischenring der Dicke $\qty{3}{\milli\meter}$.}
+    \label{fig:h3ring}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics{build/h6ring.pdf}
-    \caption{Frequenzspektrum des Wasserstoffatoms bei $\alpha = \ang{180}$ mit einem Zwischenring der Dicke $\qty{6}{\milli\meter}$}
-    \label{pic:h6ring}
+    \caption{Frequenzspektrum des Wasserstoffatoms bei $\alpha = \ang{180}$ mit einem Zwischenring der Dicke $\qty{6}{\milli\meter}$.}
+    \label{fig:h6ring}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics{build/h9ring.pdf}
-    \caption{Frequenzspektrum des Wasserstoffatoms bei $\alpha = \ang{180}$ mit einem Zwischenring der Dicke $\qty{9}{\milli\meter}$}
-    \label{pic:h9ring}
+    \caption{Frequenzspektrum des Wasserstoffatoms bei $\alpha = \ang{180}$ mit einem Zwischenring der Dicke $\qty{9}{\milli\meter}$.}
+    \label{fig:h9ring}
 \end{figure}
+\FloatBarrier
+
+\subsection{Wasserstoffmolekül}
 \begin{figure}
     \centering
     \includegraphics{build/h2dia.pdf}
-    \caption{Resonanzamplitude des Wasserstoffmoleküls bei $\alpha = \ang{180}$ in Abhängigkeit des Blendendurchmessers}
-    \label{pic:h9ring}
+    \caption{Resonanzamplitude des Wasserstoffmoleküls bei $\alpha = \ang{180}$ in Abhängigkeit des Blendendurchmessers.}
+    \label{fig:h9ring}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics{build/h2varangle.pdf}
-    \caption{Polarplot des Peaks bei $\qty{2.3}{\kilo\hertz}$}
-    \label{pic:h9ring}
+    \caption{Polarplot des Peaks bei $\qty{2.3}{\kilo\hertz}$.}
+    \label{fig:h9ring}
 \end{figure}
 \begin{figure}
     \begin{subfigure}{0.48\textwidth}%
     \centering%
     \includegraphics[height=5cm]{build/2c1b10.pdf}%
-    \caption{Frequenzspektren eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylinder und einer $\qty{10}{\milli\meter}$ Blende.}%
+    \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylindern und einer $\qty{10}{\milli\meter}$ Blende.}%
     \label{fig:2c1b10}%
     \end{subfigure}%
     \hfill% Fills available space in the center -> space between figures
     \begin{subfigure}{0.48\textwidth}%
     \centering%
     \includegraphics[height=5cm]{build/10c9b10.pdf}%
-    \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zehn $\qty{50}{\milli\meter}$ Zylinder und neun $\qty{10}{\milli\meter}$ Blende.}%
+    \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zehn $\qty{50}{\milli\meter}$ Zylindern und neun $\qty{10}{\milli\meter}$ Blenden.}%
     \label{fig:2c1b}%
     \end{subfigure}%
-    \caption{Die Frequenzspektrum Festkörpern bestehen aus zwei bzw. zehn $\qty{50}{\milli\meter}$ Zylinder mit einer bzw. neun $\qty{13}{\milli\meter}$ Blenden, um die 
-    Frequenzspektren Festkörper, welche eine Länge zwischen diesen beiden Extremen haben, zu repräsentieren.}%
+    \caption{Die Frequenzspektren von Festkörpern bestehend aus zwei bzw. zehn $\qty{50}{\milli\meter}$ Zylindern mit einer bzw. neun $\qty{10}{\milli\meter}$ Blenden, um die 
+    Frequenzspektren der Festkörper, welche eine Länge zwischen diesen beiden Extrema haben, zu repräsentieren.}%
     \label{fig:10mm}
 \end{figure}%
 \begin{figure}
     \begin{subfigure}{0.48\textwidth}%
     \centering%
     \includegraphics[height=5cm]{build/2c1b.pdf}%
-    \caption{Frequenzspektren eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylinder und einer $\qty{16}{\milli\meter}$ Blende.}%
+    \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylindern und einer $\qty{13}{\milli\meter}$ Blende.}%
     \label{fig:2c1b}%
     \end{subfigure}%
     \hfill% Fills available space in the center -> space between figures
     \begin{subfigure}{0.48\textwidth}%
     \centering%
     \includegraphics[height=5cm]{build/10c9b.pdf}%
-    \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zehn $\qty{50}{\milli\meter}$ Zylinder und neun $\qty{13}{\milli\meter}$ Blende.}%
+    \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zehn $\qty{50}{\milli\meter}$ Zylindern und neun $\qty{13}{\milli\meter}$ Blenden.}%
     \label{fig:2c1b}%
     \end{subfigure}%
-    \caption{Die Frequenzspektrum Festkörpern bestehen aus zwei bzw. zehn $\qty{50}{\milli\meter}$ Zylinder mit einer bzw. neun $\qty{13}{\milli\meter}$ Blenden, um die 
-    Frequenzspektren Festkörper, welche eine Länge zwischen diesen beiden Extremen haben, zu repräsentieren.}%
+    \caption{Die Frequenzspektren von Festkörpern bestehend aus zwei bzw. zehn $\qty{50}{\milli\meter}$ Zylindern mit einer bzw. neun $\qty{13}{\milli\meter}$ Blenden, um die 
+    Frequenzspektren der Festkörper, welche eine Länge zwischen diesen beiden Extrema haben, zu repräsentieren.}%
     \label{fig:13mm}
 \end{figure}%
 \begin{figure}
     \begin{subfigure}{0.48\textwidth}%
     \centering%
     \includegraphics[height=5cm]{build/2c1b16.pdf}%
-    \caption{Frequenzspektren eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylinder und einer $\qty{16}{\milli\meter}$ Blende.}%
+    \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylindern und einer $\qty{16}{\milli\meter}$ Blende.}%
     \label{fig:2c1b16}%
     \end{subfigure}%
     \hfill% Fills available space in the center -> space between figures
     \begin{subfigure}{0.48\textwidth}%
     \centering%
     \includegraphics[height=5cm]{build/10c9b16.pdf}%
-    \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zehn $\qty{50}{\milli\meter}$ Zylinder und neun $\qty{16}{\milli\meter}$ Blende.}%
+    \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zehn $\qty{50}{\milli\meter}$ Zylindern und neun $\qty{16}{\milli\meter}$ Blenden.}%
     \label{fig:2c1b16}%
     \end{subfigure}%
-    \caption{Die Frequenzspektrum Festkörpern bestehen aus zwei bzw. zehn $\qty{50}{\milli\meter}$ Zylinder mit einer bzw. neun $\qty{16}{\milli\meter}$ Blenden, um die 
-    Frequenzspektren Festkörper, welche eine Länge zwischen diesen beiden Extremen haben, zu repräsentieren.}%
+    \caption{Die Frequenzspektren von Festkörpern bestehend aus zwei bzw. zehn $\qty{50}{\milli\meter}$ Zylindern mit einer bzw. neun $\qty{16}{\milli\meter}$ Blenden, um die 
+    Frequenzspektren der Festkörper, welche eine Länge zwischen diesen beiden Extrema haben, zu repräsentieren.}%
     \label{fig:16mm}
 \end{figure}%
 \begin{figure}
     \begin{subfigure}{0.48\textwidth}%
         \centering%
-        \includegraphics[height=5cm]{build/10c9b.pdf}%
-        \caption{Frequenzspektren eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylinder und einer $\qty{16}{\milli\meter}$ Blende.}%
+        \includegraphics[height=5cm]{build/10c9b10.pdf}%
+        \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylindern und neun $\qty{10}{\milli\meter}$ Blenden.}%
         \label{fig:10c9b}%
     \end{subfigure}%
     \hfill% Fills available space in the center -> space between figures
     \begin{subfigure}{0.48\textwidth}%
         \centering%
         \includegraphics[height=5cm]{build/10c9b375.pdf}
-        \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus zehn $\qty{50}{\milli\meter}$ Zylinder und neun $\qty{16}{\milli\meter}$ Blende.}%
+        \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus neun $\qty{50}{\milli\meter}$ Zylindern, einem 
+        $\qty{37.5}{\milli\meter}$ Zylinder und neun $\qty{10}{\milli\meter}$ Blenden.}%
         \label{fig:10c9b375}
     \end{subfigure} \\
     \begin{subfigure}{0.48\textwidth}%
         \centering%
         \includegraphics[height=5cm]{build/10c9b625.pdf}%
-        \caption{Frequenzspektren eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylinder und einer $\qty{16}{\milli\meter}$ Blende.}%
+        \caption{Frequenzspektren eines 1-dimensionalen Fesktörpers bestehend aus neun $\qty{50}{\milli\meter}$ Zylindern, einem 
+        $\qty{37.5}{\milli\meter}$ Zylinder und neun $\qty{10}{\milli\meter}$ Blenden.}%
         \label{fig:10c9b625}
     \end{subfigure}%
     \hfill
     \begin{subfigure}{0.48\textwidth}%
         \centering%
         \includegraphics[height=5cm]{build/10c9b75.pdf}%
-        \caption{Frequenzspektren eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylinder und einer $\qty{16}{\milli\meter}$ Blende.}%
+        \caption{Frequenzspektrum eines 1-dimensionalen Fesktörpers bestehend aus neun $\qty{50}{\milli\meter}$ Zylindern, einem 
+        $\qty{625}{\milli\meter}$ Zylinder und neun $\qty{10}{\milli\meter}$ Blenden.}%
         \label{fig:10c9b75}
     \end{subfigure}%
-    \caption{Die Frequenzspektrum der Festkörpern bestehen aus zwei bzw. zehn $\qty{50}{\milli\meter}$ Zylinder mit einer bzw. neun $\qty{16}{\milli\meter}$ Blenden, um die 
+    \caption{Die Frequenzspektren der Festkörper bestehend neun $\qty{50}{\milli\meter}$ Zylindern und einem variablen Zylinder mit neun $\qty{10}{\milli\meter}$ Blenden, um die 
             Frequenzspektren Festkörper, welche eine Länge zwischen diesen beiden Extremen haben, zu repräsentieren.}%
     \label{fig:austauschen}
 \end{figure}%
 \begin{figure}
     \centering
     \includegraphics{build/5075.pdf}
-    \caption{Abwechselnd 5075$\qty{2.3}{\kilo\hertz}$}
-    \label{pic:5075}
+    \caption{Frequenzspektrum eines Fesktörpers bestehend aus 10 alternierenden $\qty{50}{\milli\meter}$ und $\qty{75}{\milli\meter}$ mit neun 
+    $\qty{16}{\milli\meter}$ Blenden.}
+    \label{fig:5075}
 \end{figure}
 \begin{figure}
     \begin{subfigure}{0.48\textwidth}%
         \centering%
         \includegraphics[height=5cm]{build/50single.pdf}%
-        \caption{Frequenzspektren eines 1-dimensionalen Fesktörpers bestehend aus zwei $\qty{50}{\milli\meter}$ Zylinder und einer $\qty{16}{\milli\meter}$ Blende.}%
+        \caption{Frequenzspektrum von einem einzelnen $\qty{50}{\milli\meter}$ Zylinder.}%
         \label{fig:50sinlge}%
     \end{subfigure}%
     \hfill% Fills available space in the center -> space between figures
     \begin{subfigure}{0.48\textwidth}%
         \centering%
         \includegraphics[height=5cm]{build/75single.pdf}%
-        \caption{Frequenzspektrum eines einzelnen $\qty{50}{\milli\meter}$ Zylinders}%
+        \caption{sFrequenzspektrum von einem einzelnen $\qty{75}{\milli\meter}$ Zylinder.}%
         \label{fig:75single}%
     \end{subfigure}%
-    \caption{Die Frequenzspektrum von einzelnen $\qty{50}{\milli\meter}$ bzw. $\qty{75}{\milli\meter}$ Zylindern.}%
+    \caption{Die Frequenzspektren von einzelnen $\qty{50}{\milli\meter}$ bzw. $\qty{75}{\milli\meter}$ Zylindern, um diese mit dem Spektrum
+    aus Abbildung \ref{fig:5075} zu vergleichen.}%
     \label{fig:75and50single}
 \end{figure}%
+\begin{figure}
+    \centering
+    \includegraphics{build/1316.pdf}
+    \caption{Frequenzspektrum eines Festkörpers bestehend aus acht $\qty{50}{\milli\meter}$ Zylindern mit sieben alternierenden einzelnen $\qty{13}{\milli\meter}$ und 
+    $\qty{16}{\milli\meter}$ Blenden.}
+    \label{fig:1316}
+\end{figure}
