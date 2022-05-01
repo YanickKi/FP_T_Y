@@ -1,4 +1,131 @@
 \section{Theorie}
 \label{sec:Theorie}
+In dem folgendem Versuch werden akustische Experimente in verschiedenen Resonatoren durchgeführt.
+Ziel ist es die Analogen zwischen akustischen und quantenmechanischen Sytem zu untersuchen und Unterschiede herauszustellen. 
+\\
+\\
+Schallwellen sind longitudiale Schwingungen welche sich über ein Medium (wie z.B. Gas) ausbreiten. 
+Die akustischen Wellen können über den Schalldruck $p$ beschrieben werden. Für diesen gilt die Wellengleichung
+\begin{equation}
+    \frac{\partial^2 p(\vec{x}, t)}{\partial t^2} = \symup{c}^2 \increment p(\vec{x}, t)
+    \label{eqn:schallwellen}
+\end{equation}
+mit der Schallgeschwindigkeit c im jeweiligen Medium. Wenn die Schallwelle sich in einem Resonator ausbreitet, muss die Funktion $p(\vec{x}, t)$
+an den Rändern des Volumens $\symup{V}$ die Neumann-Randbedingung
+\begin{equation}
+    \nabla p(\vec{x}, t) \bigr |_{\partial\symup{V}} = 0
+    \label{eqn:neumann}
+\end{equation}
+erfüllen.
+\\
+Das Verhalten eines quantenmechanischen Systems lässt sich durch die Lösung der zeitabhängigen Schrödingergleichung 
+\begin{equation}
+    i \hbar \frac{\partial}{\partial \symup{t}} \Psi(\vec{x}, t) = \biggl(-\frac{\hbar^2}{2 \symup{m}} \increment + V(\vec{x}, t)\biggr) \Psi(\vec{x}, t)
+    \label{eqn:schrödingert}
+\end{equation}
+bestimmen. Dabei ist $\Psi(\vec{x}, t)$ die quantenmechanische Wellenfunktion, welche immer der Normierungsbedingung
+\begin{equation}
+    \iiint_{\mathbb{R}^3} \Psi(\vec{x}, t)\, \symup{d}x\, \symup{d}y\, \symup{d}z = 1
+    \label{eqn:norm}
+\end{equation}
+genügen muss. Die Wellenfunktion ist nicht direkt messbar jedoch ist das Betragsquadrat, was der Wahrscheinlichkeitsdichte entspricht, im Experiment messbar.
+Im Falle eines zeitunabhängigen Potentials kann mit Hilfe einer Variablenseperation $\Psi(\vec{x}, t) = \phi(t)\, \psi(\vec{x})$ die zeitunabhängige Schrödingergleichung
+\begin{equation}
+    \biggl(-\frac{\hbar^2}{2 \symup{m}} \increment + V(\vec{x})\biggr)\psi(\vec{x}) = \symup{E} \psi(\vec{x})
+    \label{eqn:schrödinger}
+\end{equation}
+hergeleitet werden. Dabei ist E ein Energieeigenwert.
 
-\cite{sample}
+\subsection{Eindimensionaler Unendlicher Potentialtopf}
+In der Quantenmechanik wird der unendliche Potentialtopf über ein Potential der Form
+\begin{equation}
+    V(x) = 
+    \begin{cases}
+        0 ,
+        & 0 \ge x \ge \symup{L} \\
+        \infty , & \text{sonst}
+    \end{cases}
+\end{equation}
+dargestellt. Dabei ist L die Länge des Potentialtopfes. Außerhalb des Potentialtopfes muss die Wellenfunktion null sein.
+Aufgrund der Stetigkeitsbedingung gelten die Dirichlet-Randbedingungen $\Psi(0,t) = \Psi(L,t) =0$.
+Es resultiert eine Wellenfunktion der Form
+\begin{equation}
+    \psi(x) = \sqrt{\frac{2}{L}} \sin(kx)
+    \label{eqn:psitopf}
+\end{equation}
+mit $k = \frac{n \pi}{L}$, $n \in \mathbb{Z}/\{0\}$.
+Das analoge System in der Akustik ist ein Hohlraumresonator. An den Innenoberflächen des Resonators wird die Schallwelle reflektiert, sodass 
+sich bei passenden Frequenzen
+\begin{equation}
+    f = \frac{n c}{2 L}
+    \label{eqn:resonanzlin}
+\end{equation}
+stehende Wellen ausbilden.
+Mit der Gleichung \ref{eqn:schallwellen} und der Neumann-Randbedingung \ref{eqn:neumann}
+folgt für den Schalldruck
+\begin{equation}
+    p(x,t) = p_0 \cos(kx) \cos(\omega t)
+\end{equation}
+mit $k = \frac{n\pi}{L}$ , $n \in \mathbb{Z}/\{0\}$ und der Druckamplitude $p_0$.
+
+\subsection{Das Wasserstoffatom}
+\subsubsection{Quantenmechanische Lösung}
+Die zeitunabhängige Schrödingergleichung des Wasserstoffatoms
+\begin{equation}
+    \biggl(-\frac{\hbar^2}{2 \symup{m}} \increment + \frac{\symup{e}^2}{4 \pi \epsilon_0 r}\biggr)\psi(\vec{r}) = \symup{E} \psi(\vec{r})
+    \label{eqn:schrödingerwass}
+\end{equation}
+kann über den Seperationsansatz $\psi_{nlm}(r,\theta, \varphi) = R_{nl}(r) Y_{lm}(\theta, \varphi)$ gelöst werden.
+Dabei sind die Indizes n, l und m definiert als die Hauptquantenzahl $n \in \mathbb{N}/\{0\}$, die ganzzahlige Bahndrehimpulsquantenzahl
+$0 \leq l \leq n-1$ und die magnetische Quantenzahl $ -l \leq m \leq l$.
+Die Energie $E = -\frac{E_{Rd}}{n^2}$ ist in l und m entartet. Die Energieentartung in l liegt an der $\frac{1}{r}$-Abhängigkeit des Coulombpotentials, während die 
+Entartung in m an der Kugelsymmetrie des Potentials liegt. Sie lässt sich durch ein angelegtes Magnetfeld auflösen. 
+Die Winkelabhängige Lösung ist die Kugelfächenfunktion, welche mit den Legendre-Polynomen $P_{lm}(x)$ als
+\begin{equation}
+    Y_{lm}(\theta, \varphi) = \frac{1}{\sqrt{2\pi}} \sqrt{\frac{2l+1}{2}\frac{(l-m)!}{(l+m)!}} P_{lm}(cos(\theta)) \exp(im\varphi)
+\end{equation}
+definiert ist.
+\subsubsection{Der Kugelresonator}
+Ein Kugelresonator soll im akustischen Analogon das Coulombpotential des Wasserstoffatoms ersetzen
+Um eine stehende Welle auszubilden muss die Gleichung \ref{eqn:schallwellen} und \ref{eqn:neumann} erfüllt sein. Durch den Seperationsansatz
+$p(r, \theta, \phi) = Y_{lm}(\theta, \phi) f(r)$ ergibt sich erneut die Kugelflächenfunktion als Lösung für den Winkelanteil.
+Der Radialanteil ist jedoch unterschiedlich. Da im Kugelresonator eine Kugelsymmetrie vorliegt ist in m eine Entartung, jedoch liegt in l keine Entartung
+vor. Die Entartung in m lässt sich durch brechen der Kugelsymmetrie auflösen.
+
+\subsection{Das Wasserstoffmolekül}
+Das Wasserstoffmolekül kann in erster Näherung als Überlagerung atomarer Wellenfunktionen betrachtet werden.
+Die Wellenfunktionen können sich symmetrisch
+\begin{equation}
+    \psi_s(\vec{r}) = C(\psi_1(\vec{r})+\psi_2(\vec{r}))
+\end{equation}
+oder antisymmetrisch
+\begin{equation}
+    \psi_a(\vec{r}) = C(\psi_1(\vec{r})-\psi_2(\vec{r}))
+\end{equation}
+überlagern. Mit einer Normierungskonstante $C$. Bei der antisymmetrischen Wellenfunktion verschwindet die Aufenthaltswahrscheinlichkeit des Elektrons
+in einem Punkt zwischen den beiden Kernen. Dadurch ist der antisymmetrische Zustand nicht bindend. 
+Die symmetrische Wellenfunktion hingegen hat einen endlichen Wert an jedem Punkt zwischen den Kernen. Die folgende Energieabsenkung führt zu einem bindenden Zustand.
+Für die Wasserstoffmolekülzustände ist l keine gute Quantenzahl mehr. Zustände werden nur durch n und m beschrieben.
+Das akustische Analogon sind zwei gekoppelte sphärische Resonatoren. Die bindenden und nicht bindenden Zustände werden im Resonator durch die Phasendifferenz zwischen
+oberen und unteren Resonator identifiziert. Der bindende Zustand hat eine Phasendifferenz von $\varphi = \ang{0;;}$, während der nicht bindende gegenphasig ist $\varphi = \ang{180;;}$.
+
+\subsection{Der eindimensionale Festkörper}
+Die Schrödingergleichung die einen Festkörper beschreibt hat ein Periodisches Potential, welches abhängig ist von dem jeweiligen Festkörper.
+Um die Energie von Elektronen im Festkörper zu bestimmen, können erst freie Elektronen betrachtet werden. Dann werden schwache, periodische Streuzentren
+eingeführt an denen die Wellenfunktion des Elektrons streut. 
+Bei dem eindimensionalen Festkörper werden die Wellenlängen, die der Braggbedingung 
+\begin{equation}
+    n \lambda = 2 d \iff k = \frac{n \pi}{d}
+    \label{eqn:bragg}
+\end{equation}
+genügen, besonders effektiv gestreut. In \ref{eqn:bragg} ist $\lambda$ die Wellenlänge der Elektronen, d der Abstand der Kristallebenen und k der Wellenvektor der Elektronen.
+Die Dispersionsrelation von freien Elektronen
+\begin{equation}
+    E = \frac{\hbar^2 k^2}{2 m_e}
+\end{equation}
+ist parabolisch. Werden aber Elektronen welche die Braggbedingung erfüllen stark gestreut, bilden sich Bandlücken in diesen Bereichen von k, da sich
+dort keine Elektronen mehr aufhalten. 
+Das akustische Analogon ist eine Kette aus Hohlraumzylindern die durch Blenden voneinander getrennt werden. Die Blenden wirken als Streuzentren für 
+die Schallwellen und die Hohlraumresonatoren der Länge L repräsentieren die Einheitszelle des eindimensionalen Festkörpers.
+
+
