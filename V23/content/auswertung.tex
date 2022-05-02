@@ -36,7 +36,7 @@ Um die Polarplots mit den Kugelflächenfunktionen zu vergleichen, wurden die Dar
 \FloatBarrier
 In der Abbildung \ref{fig:600os} wird ersichtlich, dass sich die Peaks in der Abbildung \ref{fig:50os} zu mehreren kleineren Peaks aufspalten.
 
-\subsubsection{Phasenverschiebung des aufgenommenen Welle}
+\subsubsection{Phasenverschiebung der aufgenommenen Welle}
 Die relative Phase des oberen bzw. unteren Mikrofons $\varphi_{\symup{oben}}$ und $\varphi_{\symup{unten}}$ zur Eingangswelle ist für die jeweilige Resonanzfrequenz im Intervall 
 $\omega \in [\qty{100}{\hertz}\, , \qty{10}{\kilo\hertz}]$ in Tabelle 
 \ref{tab:hphase} angegeben. 
@@ -119,9 +119,10 @@ Der Winkel $\theta$ entspricht dabei nicht mit gemessenen Winkel $\alpha$. Zwisc
 \begin{figure}
     \centering
     \includegraphics{build/h2dia.pdf}
-    \caption{Resonanzamplitude des Wasserstoffmoleküls bei $\alpha = \ang{180}$ in Abhängigkeit des Blendendurchmessers.}
+    \caption{Resonanzamplitude bei $\omega = \qty{2.3}{\kilo\hertz}$ des Wasserstoffmoleküls bei einem Winkel von $\alpha = \ang{180}$ in Abhängigkeit des Blendendurchmessers.}
     \label{fig:h2dia}
 \end{figure}
+Anhand Abbildung \ref{fig:h2dia} lässt sich erkennen, dass ein größerer Blendendurchmesser eine größere Kopplung und somit Amplitude hervorruft.
 \begin{figure}
     \centering
     \includegraphics{build/h2varangle.pdf}
@@ -137,11 +138,15 @@ Der Winkel $\theta$ entspricht dabei nicht mit gemessenen Winkel $\alpha$. Zwisc
     \toprule
     {$\omega \mathbin{/} \si{\kilo\hertz}$} & $\varphi_{\symup{oben}}$ & $\varphi_{\symup{unten}}$ &{$\symup{\Delta}\varphi$} \\
     \midrule
-        2.48   & 7    & -172   & 179 \\
-        2.295  & 0    & 0      & 0\\
+    2.295  & 0    & 0      & 0\\    
+    2.48   & 7    & -172   & 179 \\
     \bottomrule
     \end{tabular}
   \end{table}
+In tabelle \ref{tab:h2phase} lässt sich erkennen, dass bei der Frequenz $\omega = \qty{2.295}{\kilo\hertz}$ ein bindender Zustand vorliegt, da die Phasenverschiebung 
+$\symup{\Delta}\varphi = 0$ ist. Der Zustand bei der Frequenz $\omega = \qty{2.48}{\kilo\hertz}$ ein antibindender Zustand, da  die Phasenverschiebung 
+$\symup{\Delta}\varphi = 179$ beträgt.
+
 \subsection{1-dimensionaler Festkörper}
 \begin{figure}
     \begin{subfigure}{0.48\textwidth}%
@@ -263,3 +268,4 @@ Der Winkel $\theta$ entspricht dabei nicht mit gemessenen Winkel $\alpha$. Zwisc
     $\qty{16}{\milli\meter}$ Blenden.}
     \label{fig:1316}
 \end{figure}
+In Abbildung \ref{fig:1316} wird deutlich, dass die Periodizität der verschiedenen Zylinderlängen ein Analogon zu zwei Untergitter ist. 
