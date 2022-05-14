@@ -1,10 +1,11 @@
 \section{Theorie}
 \label{sec:Theorie}
+Die folgende Informationen sind den Quellen \cite{mech} und \cite{quant}  entnommen worden.
 In dem folgendem Versuch werden akustische Experimente in verschiedenen Resonatoren durchgeführt.
-Ziel ist es die Analogen zwischen akustischen und quantenmechanischen Sytem zu untersuchen und Unterschiede herauszustellen. 
+Ziel ist es die Analogen zwischen akustischen und quantenmechanischen Systemen zu untersuchen und Unterschiede herauszustellen. 
 \\
 \\
-Schallwellen sind longitudiale Schwingungen welche sich über ein Medium (wie z.B. Gas) ausbreiten. 
+Schallwellen sind longitudinale Schwingungen welche sich über ein Medium (wie z.B. Gas) ausbreiten. 
 Die akustischen Wellen können über den Schalldruck $p$ beschrieben werden. Für diesen gilt die Wellengleichung
 \begin{equation}
     \frac{\partial^2 p(\vec{x}, t)}{\partial t^2} = \symup{c}^2 \increment p(\vec{x}, t)
@@ -36,7 +37,7 @@ Im Falle eines zeitunabhängigen Potentials kann mit Hilfe einer Variablensepera
 \end{equation}
 hergeleitet werden. Dabei ist E ein Energieeigenwert.
 
-\subsection{Eindimensionaler Unendlicher Potentialtopf}
+\subsection{Eindimensionaler unendlicher Potentialtopf}
 In der Quantenmechanik wird der unendliche Potentialtopf über ein Potential der Form
 \begin{equation}
     V(x) = 
@@ -71,26 +72,27 @@ mit $k = \frac{n\pi}{L}$ , $n \in \mathbb{Z}/\{0\}$ und der Druckamplitude $p_0$
 \subsection{Das Wasserstoffatom}
 \subsubsection{Quantenmechanische Lösung}
 Die zeitunabhängige Schrödingergleichung des Wasserstoffatoms
-\begin{equation}
+\begin{equation} 
     \biggl(-\frac{\hbar^2}{2 \symup{m}} \increment + \frac{\symup{e}^2}{4 \pi \epsilon_0 r}\biggr)\psi(\vec{r}) = \symup{E} \psi(\vec{r})
     \label{eqn:schrödingerwass}
 \end{equation}
-kann über den Seperationsansatz $\psi_{nlm}(r,\theta, \varphi) = R_{nl}(r) Y_{lm}(\theta, \varphi)$ gelöst werden.
+kann über den Separationsansatz $\psi_{nlm}(r,\theta, \varphi) = R_{nl}(r) Y_{lm}(\theta, \varphi)$ gelöst werden.
 Dabei sind die Indizes n, l und m definiert als die Hauptquantenzahl $n \in \mathbb{N}/\{0\}$, die ganzzahlige Bahndrehimpulsquantenzahl
 $0 \leq l \leq n-1$ und die magnetische Quantenzahl $ -l \leq m \leq l$.
-Die Energie $E = -\frac{E_{Rd}}{n^2}$ ist in l und m entartet. Die Energieentartung in l liegt an der $\frac{1}{r}$-Abhängigkeit des Coulombpotentials, während die 
+Die Energie $E = -\frac{E_{Ryd}}{n^2}$ ist in l und m entartet. Die Energieentartung in l liegt an der $\frac{1}{r}$-Abhängigkeit des Coulombpotentials, während die 
 Entartung in m an der Kugelsymmetrie des Potentials liegt. Sie lässt sich durch ein angelegtes Magnetfeld auflösen. 
-Die Winkelabhängige Lösung ist die Kugelfächenfunktion, welche mit den Legendre-Polynomen $P_{lm}(x)$ als
+Die winkelabhängige Lösung ist die Kugelfächenfunktion, welche mit den Legendre-Polynomen $P_{lm}(x)$ als
 \begin{equation}
-    Y_{lm}(\theta, \varphi) = \frac{1}{\sqrt{2\pi}} \sqrt{\frac{2l+1}{2}\frac{(l-m)!}{(l+m)!}} P_{lm}(cos(\theta)) \exp(im\varphi)
+    Y_{lm}(\theta, \varphi) = \frac{1}{\sqrt{2\pi}} \sqrt{\frac{2l+1}{2}\frac{(l-m)!}{(l+m)!}} P_{lm}(\cos(\theta)) \exp(im\varphi)
 \end{equation}
 definiert ist.
 \subsubsection{Der Kugelresonator}
-Ein Kugelresonator soll im akustischen Analogon das Coulombpotential des Wasserstoffatoms ersetzen
-Um eine stehende Welle auszubilden muss die Gleichung \ref{eqn:schallwellen} und \ref{eqn:neumann} erfüllt sein. Durch den Seperationsansatz
+Ein Kugelresonator soll im akustischen Analogon das Coulombpotential des Wasserstoffatoms ersetzen.
+Um eine stehende Welle auszubilden, müssen die Gleichungen \ref{eqn:schallwellen} und \ref{eqn:neumann} erfüllt sein. Durch den Seperationsansatz
 $p(r, \theta, \phi) = Y_{lm}(\theta, \phi) f(r)$ ergibt sich erneut die Kugelflächenfunktion als Lösung für den Winkelanteil.
-Der Radialanteil ist jedoch unterschiedlich. Da im Kugelresonator eine Kugelsymmetrie vorliegt ist in m eine Entartung, jedoch liegt in l keine Entartung
-vor. Die Entartung in m lässt sich durch brechen der Kugelsymmetrie auflösen.
+Der Radialanteil ist jedoch unterschiedlich. Da im Kugelresonator eine Kugelsymmetrie vorliegt, herrscht in m eine Entartung.
+Jedoch fehlt im Resonator ein $\sfrac{1}{r}$-Potential, so dass dort keine Entartung in l vorliegt. 
+Die Entartung in m lässt sich durch brechen der Kugelsymmetrie auflösen.
 
 \subsection{Das Wasserstoffmolekül}
 Das Wasserstoffmolekül kann in erster Näherung als Überlagerung atomarer Wellenfunktionen betrachtet werden.
@@ -102,15 +104,15 @@ oder antisymmetrisch
 \begin{equation}
     \psi_a(\vec{r}) = C(\psi_1(\vec{r})-\psi_2(\vec{r}))
 \end{equation}
-überlagern. Mit einer Normierungskonstante $C$. Bei der antisymmetrischen Wellenfunktion verschwindet die Aufenthaltswahrscheinlichkeit des Elektrons
+mit einer Normierungskonstante $C$ überlagern. Bei der antisymmetrischen Wellenfunktion verschwindet die Aufenthaltswahrscheinlichkeit des Elektrons
 in einem Punkt zwischen den beiden Kernen. Dadurch ist der antisymmetrische Zustand nicht bindend. 
 Die symmetrische Wellenfunktion hingegen hat einen endlichen Wert an jedem Punkt zwischen den Kernen. Die folgende Energieabsenkung führt zu einem bindenden Zustand.
 Für die Wasserstoffmolekülzustände ist l keine gute Quantenzahl mehr. Zustände werden nur durch n und m beschrieben.
 Das akustische Analogon sind zwei gekoppelte sphärische Resonatoren. Die bindenden und nicht bindenden Zustände werden im Resonator durch die Phasendifferenz zwischen
-oberen und unteren Resonator identifiziert. Der bindende Zustand hat eine Phasendifferenz von $\varphi = \ang{0;;}$, während der nicht bindende gegenphasig ist $\varphi = \ang{180;;}$.
+oberen und unteren Resonator identifiziert. Der bindende Zustand hat eine Phasendifferenz von $\varphi = \ang{0;;}$, während der nicht bindende Zustand mit $\varphi = \ang{180;;}$ antibindend ist.
 
 \subsection{Der eindimensionale Festkörper}
-Die Schrödingergleichung die einen Festkörper beschreibt hat ein Periodisches Potential, welches abhängig ist von dem jeweiligen Festkörper.
+Die Schrödingergleichung, die einen Festkörper beschreibt, hat ein periodisches Potential, welches von dem jeweiligen Festkörper abhängig ist.
 Um die Energie von Elektronen im Festkörper zu bestimmen, können erst freie Elektronen betrachtet werden. Dann werden schwache, periodische Streuzentren
 eingeführt an denen die Wellenfunktion des Elektrons streut. 
 Bei dem eindimensionalen Festkörper werden die Wellenlängen, die der Braggbedingung 
@@ -118,14 +120,14 @@ Bei dem eindimensionalen Festkörper werden die Wellenlängen, die der Braggbedi
     n \lambda = 2 d \iff k = \frac{n \pi}{d}
     \label{eqn:bragg}
 \end{equation}
-genügen, besonders effektiv gestreut. In \ref{eqn:bragg} ist $\lambda$ die Wellenlänge der Elektronen, d der Abstand der Kristallebenen und k der Wellenvektor der Elektronen.
+genügen, besonders effektiv gestreut. In Gleichung \eqref{eqn:bragg} ist $\lambda$ die Wellenlänge der Elektronen, $d$ der Abstand der Kristallebenen und $k$ der Wellenvektor der Elektronen.
 Die Dispersionsrelation von freien Elektronen
 \begin{equation}
     E = \frac{\hbar^2 k^2}{2 m_e}
 \end{equation}
-ist parabolisch. Werden aber Elektronen welche die Braggbedingung erfüllen stark gestreut, bilden sich Bandlücken in diesen Bereichen von k, da sich
+ist parabolisch. Werden aber Elektronen, welche die Braggbedingung erfüllen, stark gestreut, bilden sich Bandlücken in diesen Bereichen von k aus, da sich
 dort keine Elektronen mehr aufhalten. 
-Das akustische Analogon ist eine Kette aus Hohlraumzylindern die durch Blenden voneinander getrennt werden. Die Blenden wirken als Streuzentren für 
+Das akustische Analogon ist eine Kette aus Hohlraumzylindern, die durch Blenden voneinander getrennt werden. Die Blenden wirken als Streuzentren für 
 die Schallwellen und die Hohlraumresonatoren der Länge L repräsentieren die Einheitszelle des eindimensionalen Festkörpers.
 
 

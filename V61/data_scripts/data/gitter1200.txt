@@ -1,0 +1,2 @@
+#Abstand links /cm  Abstand rechts/cm
+36.4                36.8
