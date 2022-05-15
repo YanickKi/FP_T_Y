@@ -10,9 +10,11 @@ build/TEM00.pdf: data_scripts/scripts/TEM00.py matplotlibrc header-matplotlib.te
 build/polarisation.pdf: data_scripts/scripts/polarisation.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/scripts/polarisation.py
 
+build/wavelength.pdf: data_scripts/scripts/wavelength.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/scripts/wavelength.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/TEM00.pdf build/polarisation.pdf
+build/main.pdf: build/TEM00.pdf build/polarisation.pdf build/wavelength.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

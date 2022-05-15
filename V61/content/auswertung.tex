@@ -1,2 +1,193 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{$\symup{TEM}_{00}$ Mode}
+\label{subsec:TEM00}
+\begin{table}
+    \centering
+    \caption{Gemessene Intensität in Abhängigkeit von der x-Koordinate}
+    \label{tab:TEM00}
+    \begin{tabular}
+      {S[table-format = 3.0] S[table-format = 1.2]
+      }
+      \toprule
+      {$x \mathbin{/} \si{\milli\metre}$} & {$I \mathbin{/} \si{\milli\watt}$} \\
+      \midrule
+      -10 & 1.4 \\
+      -9  & 2 \\
+      -8  & 3   \\
+      -7  & 4.3 \\
+      -6  & 6.5 \\
+      -5  & 9.2 \\
+      -4  & 13  \\
+      -3  & 18  \\
+      -2  & 20  \\
+      -1  & 22  \\
+      0   & 23  \\
+      1   & 20  \\
+      2   & 18  \\
+      3   & 14  \\
+      4   & 11  \\
+      5   & 9   \\
+      6   & 4   \\
+      7   & 3   \\
+      8   & 2   \\
+      9   & 2   \\
+      10  & 1   \\
+      \bottomrule
+      \end{tabular}
+  \end{table} 
+
+In Abbildung \ref{fig:TEM00} sind die ist die gemessene Intensität gegen die x-Koordinate mit einem Fit aufgetragen, wobei der Peak dem Ursprung entspricht.
+Der Fit wurde mit der Funktion \ref{TEMPLATE} durchgeführt.
+Dabei ergaben sich die Fitparameter zu 
+\begin{align*}
+    I_0 &= \qty{22.198(341)}{\milli\watt}\\
+    x_0 &= \qty{-0.348(65)}{\milli\metre}\\
+    w^2 &= \qty{-3.679(65)}{\milli\metre} \, \text{.}
+\end{align*}
+\begin{figure}
+    \centering
+    \includegraphics{build/TEM00.pdf}
+    \caption{Gemessene Intensität in Abhängigkeit von der x-Koordinate mit einer Gauß-Kurve als Fit}
+    \label{fig:TEM00}
+\end{figure}
+\FloatBarrier
+\subsection{Bestimmung der Polarisation}
+\label{subsec:polarisation}
+In Tabelle \ref{tab:polarisation} sind die Messwerte der Intensität in Abhängigkeit von der Polarisationsrichtung aufgeführt.
+Diese Messwerte sind in Abbildung \ref{fig:polarisation} graphisch mit einem Fit dargestellt, wobei die Funktion \ref{TEMPLATE} in der modifizierten Form 
+\begin{equation*}
+    I = I_0 \cos^2(a\varphi+\varphi_0) + b
+\end{equation*}
+verwendet wurde.
+Die Fitparameter ergeben sich zu
+\begin{align*}
+    I_0 &=      \qty{1.754(0.043)}{\milli\watt}          \\   
+    \varphi_0 &=\qty{0.993(0.007)}{\radian}              \\
+    a &=        \qty{1.597(0.026)}{\radian}              \\
+    b &=        \qty{0.034(0.028)}{\milli\watt}  \, \text{.}
+\end{align*}
+\begin{table}
+    \centering
+    \caption{Gemessene Intensität in Abhängigkeit von der Polarisationsrichtung}
+    \label{tab:polarisation}
+    \begin{tabular}
+      {S[table-format = 3.0] S[table-format = 1.2]
+      }
+      \toprule
+      {$\varphi \mathbin{/} \si{\degree}$} & {$I \mathbin{/} \si{\milli\watt}$} \\
+      \midrule
+      0       &        0.007 \\
+      20      &        0.28  \\
+      40      &        0.91  \\
+      60      &        1.29  \\
+      80      &        1.77  \\
+      100     &        1.71  \\
+      120     &        1.42  \\
+      140     &        0.77  \\
+      160     &        0.2   \\
+      180     &        0.01  \\
+      200     &        0.26  \\
+      220     &        0.84  \\
+      240     &        1.27  \\
+      260     &        1.66  \\
+      280     &        1.77  \\
+      300     &        1.38  \\
+      320     &        0.75  \\
+      340     &        0.2   \\
+      \bottomrule
+      \end{tabular}
+  \end{table} 
+\begin{figure}
+    \centering
+    \includegraphics{build/polarisation.pdf}
+    \caption{Gemessene Intensität in Abhängigkeit von der Polarisationsrichtung}
+    \label{fig:polarisation}
+\end{figure}
+\FloatBarrier
+\subsection{Bestimmung der Wellenlänge}
+\label{subsec:wavelength}
+In den Tabellen \ref{tab:gitter80}, \ref{tab:gitter100}, \ref{tab:gitter600} und \ref{tab:gitter1200} sind die mittels \eqref{TEMPLATE} berechneten Wellenlängen 
+$\lambda$ mit den gemessenen Abständen $d$ der Intensitätsmaxima aufgeführt.
+Die Indizes l bzw. r geben an, ob es ein Intensitätsmaximum links oder rechts von dem 0.Maximum ist.
+\begin{table}
+    \centering
+    \caption{Berechnete Wellenlänge für den gemessenen Abstand der Intensitätsmaxima für ein Gitter mit $g = \qty{80}{\milli\meter\tothe{-1}}$.}
+    \label{tab:gitter80}
+    \begin{tabular}
+      {S[table-format = 2.1] S[table-format = 3.2] S[table-format = 2.1] S[table-format = 3.2]}
+      \toprule
+      {$d_{\symup{l}} \mathbin{/} \si{\centi\meter}$} & {$\lambda_{\symup{l}} \mathbin{/} \si{\nano\meter}$} 
+      & {$d_{\symup{r}} \mathbin{/} \si{\centi\meter}$} & {$\lambda_{\symup{r}} \mathbin{/} \si{\nano\meter}$}\\
+      \midrule
+      1.7&     690.29&       1.9&     771.59\\
+      3.5&     711.75&       3.1&     630.12\\
+      4.9&     665.66&       4.7&     638.28\\
+      6.5&     664.36&       6.2&     633.28\\
+      8.0&     656.57&       7.8&     639.81\\
+     10.0&     688.06&       9.5&     652.60\\
+     11.0&     650.97&      11.1&     657.13\\
+     14.2&     744.63&      12.8&     667.35\\
+     16.7&     787.01&      14.5&     676.75\\
+     19.3&     827.94&      16.4&     694.66\\
+     22.6&     891.36&      18.4&     714.83\\
+     26.3&     949.65&      20.7&     744.08\\
+     31.2&     961.05&      22.5&     750.71\\
+     38.2&     201.12&      25.2&     782.28\\
+      \bottomrule
+      \end{tabular}
+\end{table} 
+\begin{table}
+    \centering
+    \caption{Berechnete Wellenlänge für den gemessenen Abstand der Intensitätsmaxima für ein Gitter mit $g = \qty{100}{\milli\meter\tothe{-1}}$.}
+    \label{tab:gitter100}
+    \begin{tabular}
+      {S[table-format = 2.1] S[table-format = 3.2] S[table-format = 2.1] S[table-format = 3.2]}
+      \toprule
+      {$d_{\symup{l}} \mathbin{/} \si{\centi\meter}$} & {$\lambda_{\symup{l}} \mathbin{/} \si{\nano\meter}$} 
+      & {$d_{\symup{r}} \mathbin{/} \si{\centi\meter}$} & {$\lambda_{\symup{r}} \mathbin{/} \si{\nano\meter}$}\\
+      \midrule
+      2.00& 649.81& 1.90& 617.27\\
+      4.00& 651.17& 3.60& 585.74\\
+      5.90& 642.41& 5.60& 609.38\\
+      8.00& 656.57& 7.70& 631.44\\
+     10.10& 667.36& 9.70& 640.09\\
+     12.70& 706.00&11.80& 653.68\\
+     15.30& 737.04&14.00& 670.65\\
+     18.30& 781.70&16.40& 694.66\\
+      \bottomrule
+      \end{tabular}
+\end{table} 
+\begin{table}
+    \centering
+    \caption{Berechnete Wellenlänge für den gemessenen Abstand der Intensitätsmaxima für ein Gitter mit $g = \qty{600}{\milli\meter\tothe{-1}}$.}
+    \label{tab:gitter600}
+    \begin{tabular}
+      {S[table-format = 2.1] S[table-format = 3.2] S[table-format = 2.1] S[table-format = 3.2]}
+      \toprule
+      {$d_{\symup{l}} \mathbin{/} \si{\centi\meter}$} & {$\lambda_{\symup{l}} \mathbin{/} \si{\nano\meter}$} 
+      & {$d_{\symup{r}} \mathbin{/} \si{\centi\meter}$} & {$\lambda_{\symup{r}} \mathbin{/} \si{\nano\meter}$}\\
+      \midrule
+      12.60&     700.16&      12.80&     711.84\\
+      35.00&     695.04&      34.90&     703.29\\
+      \bottomrule
+      \end{tabular}
+\end{table} 
+\begin{table}
+    \centering
+    \caption{Berechnete Wellenlänge für den gemessenen Abstand der Intensitätsmaxima für ein Gitter mit $g = \qty{1200}{\milli\meter\tothe{-1}}$.}
+    \label{tab:gitter1200}
+    \begin{tabular}
+      {S[table-format = 2.1] S[table-format = 3.2] S[table-format = 2.1] S[table-format = 3.2]}
+      \toprule
+      {$d_{\symup{l}} \mathbin{/} \si{\centi\meter}$} & {$\lambda_{\symup{l}} \mathbin{/} \si{\nano\meter}$} 
+      & {$d_{\symup{r}} \mathbin{/} \si{\centi\meter}$} & {$\lambda_{\symup{r}} \mathbin{/} \si{\nano\meter}$}\\
+      \midrule
+      36.40&     537.96&      36.80&     476.35\\ 
+      \bottomrule
+      \end{tabular}
+\end{table} 
+Über alle berechneten Wellenlänge gemittelt, ergibt sich ein Mittelwert von 
+\begin{equation*}
+    \bar{\lambda}= \qty{644.27(22778)}{\nano\metre} \, \text{.}
+\end{equation*}

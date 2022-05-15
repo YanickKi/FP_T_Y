@@ -6,8 +6,8 @@ phi, I = np.genfromtxt('data_scripts/data/polarisation.txt', unpack = True)
 
 phi = np.deg2rad(phi)
 
-def f(phi, I0, phi0, c):
-    return I0 * (np.cos(phi + phi0))**2 + c
+def f(phi, I0, a, phi0, b):
+    return I0 * (np.cos(a*phi + phi0))**2 + b
 
 params, covariance_matrix = curve_fit(f, phi, I)
 
@@ -23,8 +23,8 @@ plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/polarisation.pdf')
 
-
-paramsname = np.array(['I0', 'phi0', 'c'])
+ 
+paramsname = np.array(['I0', 'a', 'phi0', 'c'])
 
 ab = np.zeros(paramsname.size, dtype=[('paramsname', 'U6'), ('params_values', float), ('uncertainties', float)])
 ab['paramsname'] = paramsname

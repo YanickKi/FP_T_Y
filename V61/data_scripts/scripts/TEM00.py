@@ -22,7 +22,7 @@ plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/TEM00.pdf')
 
 
-paramsname = np.array(['I0', 'x0', 'w'])
+paramsname = np.array(['I0', 'x0', 'w^2'])
 ab = np.zeros(paramsname.size, dtype=[('paramsname', 'U6'), ('params_values', float), ('uncertainties', float)])
 ab['paramsname'] = paramsname
 ab['params_values'] = params

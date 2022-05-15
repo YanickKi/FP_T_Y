@@ -1,4 +1,4 @@
 # paramsname, params, uncertainties
         I0 ,     22.198,      0.341
         x0 ,     -0.348,      0.065
-         w ,     -3.679,      0.065
+       w^2 ,     -3.679,      0.065

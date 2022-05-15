@@ -1,0 +1,2 @@
+# Abstand links, Wellenlaenge links, Abstand rechts, Wellenlaenge rechts
+     36.40,     537.96,      36.80,     476.35
