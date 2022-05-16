@@ -12,9 +12,15 @@ build/polarisation.pdf: data_scripts/scripts/polarisation.py matplotlibrc header
 
 build/wavelength.pdf: data_scripts/scripts/wavelength.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/scripts/wavelength.py
+	
+data_scripts/data/cavity.txt: data_scripts/scripts/cavity.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/scripts/cavity.py
 
-# hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/TEM00.pdf build/polarisation.pdf build/wavelength.pdf
+build/stabilitaet.pdf: data_scripts/scripts/stabilitaet.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/scripts/stabilitaet.py
+
+# hier weitere Abhängigkeiten für build/main.pdf deklarieren: 
+build/main.pdf: build/TEM00.pdf build/polarisation.pdf build/wavelength.pdf data_scripts/data/cavity.txt build/stabilitaet.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

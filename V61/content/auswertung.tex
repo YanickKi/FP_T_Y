@@ -1,10 +1,25 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-\subsection{$\symup{TEM}_{00}$ Mode}
+\subsection{Überprüfung der Stabilitätsbedingung}
+\label{subsec:stabilitaet}
+Bei dem plan-konkav-Resonator wurde ab einem Abstand von $L = \qty{140}{\centi\metre}$ eine Intensität von  $I = \qty{1}{\micro\watt}$ gemessen, welche auf 
+äußere Störung zurückzuführen ist.
+Bei der konkav-konkav-Anordnung wurde zwischen $L = \qty{135}{\centi\metre}$ und $L = \qty{150}{\centi\metre}$ keine Intensität mehr gemessen. Da die Schiene
+nicht lang genug für einen Resonator der Länge $L = \qty{280}{\centi\metre}$ ist, wurde bis $L = \qty{210}{\centi\metre}$ gemessen, wo eine 
+Intensität von $I = \qty{3}{\milli\watt}$ gemessen wurde.
+In der Abbildung \ref{fig:stabilitaet} sind die gemssenen Intensiäten $I$ gegen die Resonatorlänge $L$ für beide Konfigurationen aufgetragen.
+\begin{figure}
+    \centering
+    \includegraphics{build/stabilitaet.pdf}
+    \caption{Gemessene Intensität in Abhängigkeit von der Resonatorlänge.}
+    \label{fig:stabilitaet}
+\end{figure}
+\FloatBarrier
+\subsection{$\text{TEM}_{00}$ Mode}
 \label{subsec:TEM00}
 \begin{table}
     \centering
-    \caption{Gemessene Intensität in Abhängigkeit von der x-Koordinate}
+    \caption{Gemessene Intensität in Abhängigkeit von der x-Koordinate.}
     \label{tab:TEM00}
     \begin{tabular}
       {S[table-format = 3.0] S[table-format = 1.2]
@@ -48,7 +63,7 @@ Dabei ergaben sich die Fitparameter zu
 \begin{figure}
     \centering
     \includegraphics{build/TEM00.pdf}
-    \caption{Gemessene Intensität in Abhängigkeit von der x-Koordinate mit einer Gauß-Kurve als Fit}
+    \caption{Gemessene Intensität in Abhängigkeit von der x-Koordinate mit einer Gauß-Kurve als Fit.}
     \label{fig:TEM00}
 \end{figure}
 \FloatBarrier
@@ -69,7 +84,7 @@ Die Fitparameter ergeben sich zu
 \end{align*}
 \begin{table}
     \centering
-    \caption{Gemessene Intensität in Abhängigkeit von der Polarisationsrichtung}
+    \caption{Gemessene Intensität in Abhängigkeit von der Polarisationsrichtung.}
     \label{tab:polarisation}
     \begin{tabular}
       {S[table-format = 3.0] S[table-format = 1.2]
@@ -101,7 +116,7 @@ Die Fitparameter ergeben sich zu
 \begin{figure}
     \centering
     \includegraphics{build/polarisation.pdf}
-    \caption{Gemessene Intensität in Abhängigkeit von der Polarisationsrichtung}
+    \caption{Gemessene Intensität in Abhängigkeit von der Polarisationsrichtung.}
     \label{fig:polarisation}
 \end{figure}
 \FloatBarrier
@@ -189,5 +204,28 @@ Die Indizes l bzw. r geben an, ob es ein Intensitätsmaximum links oder rechts v
 \end{table} 
 Über alle berechneten Wellenlänge gemittelt, ergibt sich ein Mittelwert von 
 \begin{equation*}
-    \bar{\lambda}= \qty{644.27(22778)}{\nano\metre} \, \text{.}
+    \bar{\lambda}= \qty{644.27(2960)}{\nano\metre} \, \text{.}
 \end{equation*}
+\FloatBarrier
+\subsection{Bestimmung der Resonatorlänge mittels longitudalen Moden}
+\label{subsec:longitudal}
+In Tabelle \ref{tab:longitudinal} sind die mittels Gleichung \eqref{TEMPLATE} berechneten Resonatorlängen $L$ und 
+die Abstände der Peaks $\symup{\Delta}\nu$ aufgetragen.
+Als Vergleich sind dort auch die gemessenen Resonatorlängen $L_\text{gemessen}$ aufgeführt.
+\begin{table}
+    \centering
+    \caption{Aus dem Peakabstand $\symup{\Delta}\nu$ Berechnete Resonatorlänge $L$.}
+    \label{tab:longitudinal}
+    \begin{tabular}
+      {S[table-format = 2.1] S[table-format = 3.0] S[table-format = 3.2]}
+      \toprule
+      {$\symup{\Delta}\nu \mathbin{/} \si{\kilo\hertz}$} & {$L_{\text{gemessen}} \mathbin{/} \si{\centi\meter}$} & {$L \mathbin{/} \si{\centi\meter}$}\\
+      \midrule
+      5.1&  63&   61.81\\
+      2.4& 133&  133.24\\
+      2.1& 153&  152.44\\
+      1.8& 173&  171.31\\
+      1.2& 210&  212.62\\
+      \bottomrule
+      \end{tabular}
+\end{table} 

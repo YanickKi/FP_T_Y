@@ -33,7 +33,7 @@ lambda_mean600r = np.mean(lambda600r)
 
 lambda_mean = np.mean([lambda_mean80l, lambda_mean80r, lambda_mean100l, lambda_mean100r, lambda_mean600l, lambda_mean600r, lambda1200l, lambda1200r])
 
-lambda_std = lambda_mean / np.sqrt(2*(len(lambda80l)+len(lambda100l)+len(lambda600l)+len(lambda1200l)))
+lambda_std = np.std([lambda_mean80l, lambda_mean80r, lambda_mean100l, lambda_mean100r, lambda_mean600l, lambda_mean600r, lambda1200l, lambda1200r]) / np.sqrt(2*(len(lambda80l)+len(lambda100l)+len(lambda600l)+len(lambda1200l)))
 
 print(f'Die Wellenlaenge ergibt sich zu {lambda_mean} pm {lambda_std}.')
  
