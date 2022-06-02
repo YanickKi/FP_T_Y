@@ -16,6 +16,8 @@ uncertainties = np.sqrt(np.diag(covariance_matrix))
 phi_plot = np.linspace(phi[0], phi[-1], 1000)
 
 plt.xlabel(r'$\varphi \mathbin{/} \si{\radian}$')
+plt.xticks([0, np.pi/2, np.pi, 3*np.pi/2, 2*np.pi], [r'$0$', r'$\pi /2$', r'$\pi$', r'$\frac{3}{2}\pi$', r'$2\pi$'])
+plt.xlim(-0.2, 2*np.pi)
 plt.ylabel(r'$I \mathbin{/} \si{\milli\watt}$')
 plt.plot(phi, I,'.', label = 'Messwerte')
 plt.plot(phi_plot, f(phi_plot, *params), "-", label='Fit')

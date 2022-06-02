@@ -7,7 +7,7 @@ Bei dem plan-konkav-Resonator wurde ab einem Abstand von $L = \qty{140}{\centi\m
 Bei der konkav-konkav-Anordnung wurde zwischen $L = \qty{135}{\centi\metre}$ und $L = \qty{150}{\centi\metre}$ keine Intensität mehr gemessen. Da die Schiene
 nicht lang genug für einen Resonator der Länge $L = \qty{280}{\centi\metre}$ ist, wurde bis $L = \qty{210}{\centi\metre}$ gemessen, wo eine 
 Intensität von $I = \qty{3}{\milli\watt}$ gemessen wurde.
-In der Abbildung \ref{fig:stabilitaet} sind die gemssenen Intensiäten $I$ gegen die Resonatorlänge $L$ für beide Konfigurationen aufgetragen.
+In der Abbildung \ref{fig:stabilitaet} sind die gemessenen Intensiäten $I$ gegen die Resonatorlänge $L$ für beide Konfigurationen aufgetragen.
 \begin{figure}
     \centering
     \includegraphics{build/stabilitaet.pdf}
@@ -52,8 +52,8 @@ In der Abbildung \ref{fig:stabilitaet} sind die gemssenen Intensiäten $I$ gegen
       \end{tabular}
   \end{table} 
 
-In Abbildung \ref{fig:TEM00} sind die ist die gemessene Intensität gegen die x-Koordinate mit einem Fit aufgetragen, wobei der Peak dem Ursprung entspricht.
-Der Fit wurde mit der Funktion \ref{TEMPLATE} durchgeführt.
+In Abbildung \ref{fig:TEM00} ist die gemessene Intensität gegen die x-Koordinate mit einem Fit aufgetragen, wobei der Peak dem Ursprung entspricht.
+Der Fit wurde mit der Funktion \eqref{eqn:tem00} durchgeführt, wobei $r = x- x_0$ gilt.
 Dabei ergaben sich die Fitparameter zu 
 \begin{align*}
     I_0 &= \qty{22.198(341)}{\milli\watt}\\
@@ -70,7 +70,7 @@ Dabei ergaben sich die Fitparameter zu
 \subsection{Bestimmung der Polarisation}
 \label{subsec:polarisation}
 In Tabelle \ref{tab:polarisation} sind die Messwerte der Intensität in Abhängigkeit von der Polarisationsrichtung aufgeführt.
-Diese Messwerte sind in Abbildung \ref{fig:polarisation} graphisch mit einem Fit dargestellt, wobei die Funktion \ref{TEMPLATE} in der modifizierten Form 
+Diese Messwerte sind in Abbildung \ref{fig:polarisation} graphisch mit einem Fit dargestellt, wobei die Funktion \eqref{eqn:polar} in der modifizierten Form 
 \begin{equation*}
     I = I_0 \cos^2(a\varphi+\varphi_0) + b
 \end{equation*}
@@ -122,7 +122,7 @@ Die Fitparameter ergeben sich zu
 \FloatBarrier
 \subsection{Bestimmung der Wellenlänge}
 \label{subsec:wavelength}
-In den Tabellen \ref{tab:gitter80}, \ref{tab:gitter100}, \ref{tab:gitter600} und \ref{tab:gitter1200} sind die mittels \eqref{TEMPLATE} berechneten Wellenlängen 
+In den Tabellen \ref{tab:gitter80}, \ref{tab:gitter100}, \ref{tab:gitter600} und \ref{tab:gitter1200} sind die mittels \eqref{eqn:gitter} berechneten Wellenlängen 
 $\lambda$ mit den gemessenen Abständen $d$ der Intensitätsmaxima aufgeführt.
 Die Indizes l bzw. r geben an, ob es ein Intensitätsmaximum links oder rechts von dem 0.Maximum ist.
 \begin{table}
@@ -209,12 +209,12 @@ Die Indizes l bzw. r geben an, ob es ein Intensitätsmaximum links oder rechts v
 \FloatBarrier
 \subsection{Bestimmung der Resonatorlänge mittels longitudalen Moden}
 \label{subsec:longitudal}
-In Tabelle \ref{tab:longitudinal} sind die mittels Gleichung \eqref{TEMPLATE} berechneten Resonatorlängen $L$ und 
+In Tabelle \ref{tab:longitudinal} sind die mittels Gleichung \eqref{eqn:delnu} berechneten Resonatorlängen $L$ und 
 die Abstände der Peaks $\symup{\Delta}\nu$ aufgetragen.
 Als Vergleich sind dort auch die gemessenen Resonatorlängen $L_\text{gemessen}$ aufgeführt.
 \begin{table}
     \centering
-    \caption{Aus dem Peakabstand $\symup{\Delta}\nu$ Berechnete Resonatorlänge $L$.}
+    \caption{Aus dem Peakabstand $\symup{\Delta}\nu$ berechnete Resonatorlänge $L$.}
     \label{tab:longitudinal}
     \begin{tabular}
       {S[table-format = 2.1] S[table-format = 3.0] S[table-format = 3.2]}
