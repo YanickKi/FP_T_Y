@@ -66,13 +66,47 @@
       \end{tabular}
 \end{table}
 \subsection{Berechnung der effektiven Masse der Elektronen}
+Um die effektive Masse der Elektronen $m*$ zu bestimmen wird die Gleichung \eqref{TEMPLATE} gefittet.
+Die Ausgleichsgerade nimmt dabei die Form 
+\begin{equation*}
+    \theta_\text{frei} = a \lambda^2 + b
+\end{equation*}
+an, wobei a und b die Fitparameter sind.
+Fortan kann die effektive Masse gemäß
+\begin{equation}
+    m^* = \sqrt{\frac{e_0^3 NB }{8 \pi^2 \epsilon_0 c^3 na}} \label{eqn:mass}
+\end{equation}
+berechnet werden.
+Der dabei bei einer Wellenlänge von $\lambda = \qty{1.55}{\micro\metre}$ verwendete Brechungsindex von GaAs beträgt $n = 3.374$\cite{brechungsindex}.
+Dabei wird von dem auf eine Einheitslänge normierte Rotationswinkel der dotierten Probe der auf eine Einheitslänge normierte Rotationswinkel der undotierte Probe abgezogen,
+damit nur der Einfluss der freien Elektronen erfasst wird.
 \begin{figure}
     \centering
     \includegraphics{build/mass2.pdf}
-    \caption{Berechneter und gefitteter Rotaionswinkel $\theta_\text{frei}$ in Abhängigkeit $\lambda^2$.}
+    \caption{Berechneter und gefitteter Rotaionswinkel $\theta_\text{frei}$ in Abhängigkeit $\lambda^2$ für $
+    N=\qty{1.2e26}{\meter\tothe{-3}}, \; d = \qty{1,36}{\milli\meter}$.}
     \label{fig:mass2}
 \end{figure}
-Die Parameter ergeben sich für die Probe mit $N=\num{1.2e18}$
-\begin{equation*}
-    a = \qty{4.18(141)}{\metre}
-\end{equation*}
+Die Parameter ergeben sich für die Probe mit $N=\qty{1.2e26}{\meter\tothe{-3}}$ zu
+\begin{align*}
+    a_1 &= \qty{4181114927968.37(141181194721678)}{\metre\tothe{-3}} \\
+    b_1 &= \qty{7.15(6.53)}{\metre\tothe{-1}} \; \text{.}
+\end{align*}
+Für die Probe mit $N=\qty{2.8e26}{\meter\tothe{-3}}$ können die Parameter zu
+\begin{align*}
+    a_2 &= \qty{11428079332614.04(406840994387225)}{\metre\tothe{-3}} \\
+    b_2 &= \qty{19.70(18.82)}{\metre\tothe{-1}} \; \text{.}
+\end{align*}
+berechent werden.
+Mit Hilfe von Gleichung \eqref{eqn:mass} ergeben sich effektive Massen von 
+\begin{align*}
+    m^*_1&= \qty{8.91(151)e-32}{\kilo\gram} \\
+    m^*_2&= \qty{8.24(147)e-32}{\kilo\gram}
+\end{align*} 
+\begin{figure}
+    \centering
+    \includegraphics{build/mass3.pdf}
+    \caption{Berechneter und gefitteter Rotaionswinkel $\theta_\text{frei}$ in Abhängigkeit $\lambda^2$ für $
+    N=\qty{2.8e26}{\meter\tothe{-3}}, \; d = \qty{1,296}{\milli\meter}$.}
+    \label{fig:mass3}
+\end{figure}
