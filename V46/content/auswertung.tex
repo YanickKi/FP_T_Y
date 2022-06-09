@@ -1,6 +1,10 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Bestimmung der maximalen Feldstärke}
+\label{subsec:Feldstärke}
+Die gemessenen Feldstärken sind in Abhängigkeit von dem Abstand in Abbildung \ref{fig:magn} graphisch dargestellt und in Tabelle \ref{tab:magn} tabelliert.
+Anhand Tabelle \ref{tab:magn} lässt sich eine maximale Feldstärke von $\qty{428}{\milli\tesla}$ erkennen.
+Da die Probe bei der maximalen Feldstärke positioniert ist, wird in den folgenden Abschnitten mit diesem Wert für das Magnetfeld gerechnet.
 \begin{figure}
     \centering
     \includegraphics{build/magn.pdf}
@@ -35,38 +39,46 @@
         140    &     1  \\
       \bottomrule
       \end{tabular}
-\end{table} %       
+\end{table} %     
+\FloatBarrier  
 \subsection{Bestimmung der Winkeldifferenzen}
+\label{subsec:winkel}
+In Tablle \ref{tab:probe} sind die gemessenen Rotationswinkel in Abhängigkeit von der Wellenlänge aufgetragen. 
+Um nun die 
+
 \begin{figure}
     \centering
     \includegraphics{build/probe.pdf}
-    \caption{Gemessene Winkeldifferenzen in Abhängigkeit von der Wellenlänge.}
+    \caption{Gemessene Rotationswinkel in Abhängigkeit von der Wellenlänge.}
     \label{fig:prob}
 \end{figure}
+
 \begin{table}
     \centering
-    \caption{Gemessene Farraday-Rotation in Abhängigkeit von der Wellenlänge.}
+    \caption{Gemessene Rotationswinkel in Abhängigkeit von der Wellenlänge.}
     \label{tab:probe}
-    \begin{tabular}
-      {S[table-format = 1.3] S[table-format = 2.2] S[table-format = 2.2] S[table-format = 2.2]}
-      \toprule
-      {$\lambda  \mathbin{/} \si{\micro\meter}$} & {$\symup{\Delta}\theta_1 \mathbin{/} \si{\degree}$} & {$\symup{\Delta}\theta_2 \mathbin{/} \si{\degree}$}
-      & {$\symup{\Delta}\theta_3 \mathbin{/} \si{\degree}$}\\
-      \midrule
-      1.060 &      11.73&       2.36&       2.00\\
-      1.290 &       8.46&       3.16&       5.28\\
-      1.450 &       6.46&       2.95&       2.82\\
-      1.720 &       7.21&       3.13&       5.54\\
-      1.960 &       3.08&       3.12&       7.42\\
-      2.156 &       3.31&       3.27&       7.86\\
-      2.340 &       3.04&       3.65&       7.63\\
-      2.510 &      10.53&       4.34&       7.68\\
-      2.650 &       2.84&       3.87&       7.72\\
-      \bottomrule
-      \end{tabular}
+    \begin{tabular}{S[table-format=1.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3]}
+    \toprule
+    & \multicolumn{2}{c}{Probe 1} & \multicolumn{2}{c}{Probe 2} & \multicolumn{2}{c}{Probe 3}\\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5} \cmidrule(lr){4-5}
+    {$\lambda \mathbin{/} \unit{\micro\meter}$}
+    & {$\theta_1$} & {$\theta_2$} & {$\theta_1$} & {$\theta_2$} & {$\theta_1$} & {$\theta_2$} \\
+    \midrule
+    1.060 &     67.833&     91.300&     77.517&     81.517&     74.767&     79.483 \\
+    1.290 &     70.917&     87.833&     74.000&     84.567&     75.100&     81.417 \\
+    1.450 &     74.083&     87.000&     75.417&     81.067&     76.667&     82.567 \\
+    1.720 &     74.433&     88.850&     73.600&     84.683&     74.833&     81.100 \\
+    1.960 &     71.567&     77.717&     67.633&     82.467&     70.200&     76.433 \\
+    2.156 &     70.750&     77.367&     65.583&     81.300&     67.450&     74.000 \\
+    2.340 &     45.000&     51.083&     40.733&     56.000&     43.000&     50.300 \\
+    2.510 &     13.433&     34.483&     24.633&     40.000&     26.633&     35.317 \\
+    2.650 &     61.017&     66.700&     59.233&     74.667&     59.633&     67.367 \\
+    \bottomrule
+    \end{tabular}
 \end{table}
+\FloatBarrier
 \subsection{Berechnung der effektiven Masse der Elektronen}
-Um die effektive Masse der Elektronen $m*$ zu bestimmen wird die Gleichung \eqref{TEMPLATE} gefittet.
+Um die effektive Masse der Elektronen $m^*$ zu bestimmen wird die Gleichung \eqref{TEMPLATE} gefittet.
 Die Ausgleichsgerade nimmt dabei die Form 
 \begin{equation*}
     \theta_\text{frei} = a \lambda^2 + b
@@ -77,6 +89,8 @@ Fortan kann die effektive Masse gemäß
     m^* = \sqrt{\frac{e_0^3 NB }{8 \pi^2 \epsilon_0 c^3 na}} \label{eqn:mass}
 \end{equation}
 berechnet werden.
+Dabei ist $e_0$ die Elementarladung, $N$ die Donatorenkonzentration, $B$ die magnetische Feldstärke, $\epsilon_0$ die elektrische Feldkonstante,
+$c$ die Lichtgeschwindigkeit, $n$ der Brechungsindex von Gallium Arsenide und $a$ der Fitparameter aus Gleichung \eqref{eqn:mass}.
 Der dabei bei einer Wellenlänge von $\lambda = \qty{1.55}{\micro\metre}$ verwendete Brechungsindex von GaAs beträgt $n = 3.374$\cite{brechungsindex}.
 Dabei wird von dem auf eine Einheitslänge normierte Rotationswinkel der dotierten Probe der auf eine Einheitslänge normierte Rotationswinkel der undotierte Probe abgezogen,
 damit nur der Einfluss der freien Elektronen erfasst wird.
@@ -87,6 +101,8 @@ damit nur der Einfluss der freien Elektronen erfasst wird.
     N=\qty{1.2e26}{\meter\tothe{-3}}, \; d = \qty{1,36}{\milli\meter}$.}
     \label{fig:mass2}
 \end{figure}
+Hierbei muss angemerkt werden, dass der Messwert bei $\lambda = \qty{1.06}{\micro\metre}$ ausgelassen wurde, dieser für die undotierte Probe zu große Abweichungen zeigt
+und somit negative $ \theta_\text{frei}$ zustande kommen würden.
 Die Parameter ergeben sich für die Probe mit $N=\qty{1.2e26}{\meter\tothe{-3}}$ zu
 \begin{align*}
     a_1 &= \qty{4181114927968.37(141181194721678)}{\metre\tothe{-3}} \\
@@ -98,10 +114,10 @@ Für die Probe mit $N=\qty{2.8e26}{\meter\tothe{-3}}$ können die Parameter zu
     b_2 &= \qty{19.70(18.82)}{\metre\tothe{-1}} \; \text{.}
 \end{align*}
 berechent werden.
-Mit Hilfe von Gleichung \eqref{eqn:mass} ergeben sich effektive Massen von 
+Mit Hilfe von Gleichung \eqref{eqn:mass} ergeben sich die effektiven Massen zu
 \begin{align*}
     m^*_1&= \qty{8.91(151)e-32}{\kilo\gram} \\
-    m^*_2&= \qty{8.24(147)e-32}{\kilo\gram}
+    m^*_2&= \qty{8.24(147)e-32}{\kilo\gram} \; \text{.}
 \end{align*} 
 \begin{figure}
     \centering

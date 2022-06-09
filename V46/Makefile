@@ -13,8 +13,11 @@ build/mass2.pdf: data_scripts/scripts/mass2.py matplotlibrc header-matplotlib.te
 build/mass3.pdf: data_scripts/scripts/mass3.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/scripts/mass3.py
 
+build/winkel.pdf: data_scripts/scripts/winkel.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/scripts/winkel.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/magn.pdf build/probe.pdf	build/mass2.pdf build/mass3.pdf
+build/main.pdf: build/magn.pdf build/probe.pdf	build/mass2.pdf build/mass3.pdf build/winkel.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
