@@ -43,19 +43,23 @@ Da die Probe bei der maximalen Feldstärke positioniert ist, wird in den folgend
 \FloatBarrier  
 \subsection{Bestimmung der Winkeldifferenzen}
 \label{subsec:winkel}
-In Tablle \ref{tab:probe} sind die gemessenen Rotationswinkel in Abhängigkeit von der Wellenlänge aufgetragen. 
-Um nun die 
-
+In Tablle \ref{tab:probe} sind die gemessenen Winkel in Abhängigkeit von der Wellenlänge aufgetragen. 
+Um nun den Rotaionswinkel pro Einheitslänge zu erhalten, wird der Betrag der Differenz der beiden Winkel bei den verschiedenen Polungen genommen und halbiert, so dass 
+\begin{equation*}
+    \symup{\Delta}\theta = \frac{1}{2} | \theta_1 - \theta_2 | 
+\end{equation*}
+berechnet wird.
+Dies auf die Länge der Probe normiert, ergibt die Abbilung \ref{fig:prob}.
 \begin{figure}
     \centering
     \includegraphics{build/probe.pdf}
-    \caption{Gemessene Rotationswinkel in Abhängigkeit von der Wellenlänge.}
+    \caption{Gemessene Winkel in Abhängigkeit von der Wellenlänge.}
     \label{fig:prob}
 \end{figure}
 
 \begin{table}
     \centering
-    \caption{Gemessene Rotationswinkel in Abhängigkeit von der Wellenlänge.}
+    \caption{Gemessene Winkel in Abhängigkeit von der Wellenlänge.}
     \label{tab:probe}
     \begin{tabular}{S[table-format=1.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3]}
     \toprule
@@ -122,7 +126,7 @@ Mit Hilfe von Gleichung \eqref{eqn:mass} ergeben sich die effektiven Massen zu
 \begin{figure}
     \centering
     \includegraphics{build/mass3.pdf}
-    \caption{Berechneter und gefitteter Rotaionswinkel $\theta_\text{frei}$ in Abhängigkeit $\lambda^2$ für $
+    \caption{Berechneter und gefitteter Rotaionswinkel ausgehende von den freien Elektronen $\theta_\text{frei}$ in Abhängigkeit $\lambda^2$ für $
     N=\qty{2.8e26}{\meter\tothe{-3}}, \; d = \qty{1,296}{\milli\meter}$.}
     \label{fig:mass3}
 \end{figure}
