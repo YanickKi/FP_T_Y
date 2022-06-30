@@ -1,2 +1,66 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Bestimmung des vertikalen Magnetfeldes}
+Zunächst muss mittels Gleichung \eqref{TEMPLATE} die Feldstärke des vertikalen Magnetfeldes der Erde aus dem gemessenen Spulenstrom berechnet werden.
+Die Vertikalfeld-Spule hat einen Radius von $R = \qty{11.735}{\centi\metre}$ und eine Windungszahl von $N = 20$.\cite{TEMPLATE}
+Somit lässt sich eine Feldstärke von 
+\begin{equation*}
+    B_{\text{vertikal}} = \qty{34.79}{\micro\tesla}
+\end{equation*}
+berechnen.
+\subsection{Bestimmung der Lande Faktoren}
+In Tabelle \ref{tab:hphase} sind die gemessenen Feldstärken der horizontalen Felder bei den gegeben Frequenzen aufgezeigt.
+\begin{table}
+        \centering
+        \caption{Gemessene horizontale Feldstärken der festen und der Sweep-Spule in Abhängigkeit von der Frequenz.}
+        \label{tab:hphase}
+        \begin{tabular}{S[table-format=4.0] S[table-format=2.2] S[table-format=1.2] S[table-format=2.2] S[table-format=2.2]}
+        \toprule
+        & \multicolumn{2}{c}{$^{87}\text{Rb}$} & \multicolumn{2}{c}{$^{85}\text{Rb}$} \\
+        \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+        {$f \mathbin{/} \si{\kilo\hertz}$} & {$I_\text{hori} \mathbin{/} \si{\ampere}  $} & {$I_\text{sweep} \mathbin{/} \qty{0.1}{\ampere}$}
+        & {$I_{\text{hori}} \mathbin{/} \si{\ampere}$} & {$I_{\text{sweep}} \mathbin{/} \qty{0.1}{\ampere}$} \\
+        \midrule
+            100    &     0         &  6.47     &       0        &   7.78    \\
+            200    &     -0.01     &  6.77     &       -0.01    &   9.14    \\
+            300    &     -0.04     &  4.6      &       -0.04    &   8.13    \\
+            400    &     -0.06     &  3.27     &       -0.06    &   9       \\
+            500    &     -0.08     &  3.45     &       -0.08    &   9.37    \\
+            600    &     -0.1      &  3.0      &       -0.1     &   10      \\
+            700    &     -0.13     &  2.5      &       -0.13    &   10.35   \\
+            800    &     -0.14     &  2.4      &       -0.2     &   3.55    \\
+            900    &     -0.15     &  2.7      &       -0.23    &   1.86    \\
+            1000   &     -0.15     &  5.1      &       -0.26    &   1.90    \\                                                                                
+        \bottomrule
+        \end{tabular}
+\end{table}
+\begin{figure}
+    \centering
+    \caption{Gemessene und gefittete Feldstärken für beide Isotope.}
+    \label{fig:fit}
+    \includegraphics[width = 0.8 \textwidth]{build/fits.pdf}
+\end{figure}
+Um die Lande Faktoren der beiden Isotope zu bestimmen, wird die Gleichung \eqref{TEMPLATE} gefittet.
+Die Ausgleichsgerade besitzt die Form
+\begin{equation*}
+    B =  af + b \; ,
+\end{equation*} 
+wobei $a$ und $b$ die Fitparameter sind.
+Diese ergeben sich zu 
+\begin{align*}
+    a_{85} &= \qty{2.16(3)e-10}{\tesla\second}   \\
+    b_{85} &= \qty{2.13(20)e-5}{\tesla}            \\
+    a_{87} &= \qty{1.42(4)e-10}{\tesla\second}   \\
+    b_{87} &= \qty{2.12(27)e-5}{\tesla}            \; .
+\end{align*}
+Nun steckt in dem Parameter $a$ der Landefaktor, welche die Beziehung 
+\begin{equation*}
+    a = \frac{h}{\mu_\text{B}g_F} \iff g_F = \frac{h}{\mu_\text{B}A}
+\end{equation*}
+haben.
+Somit können die Lande Faktoren zu 
+\begin{align*}
+    g_{F, 85} &= \num{0.330(5)} \\
+    g_{F, 87} &= \num{0.501(15)}
+\end{align*}
+bestimmt werden.
