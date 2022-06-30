@@ -16,8 +16,8 @@ plt.ylabel(r'$\frac{\symup{\Delta}\theta}{d} \mathbin{/} \si{\degree\per\meter}$
 
 
 plt.plot(wavelength**2, deltatheta1/(5.11e-3),'x', label = 'Undotiert')
-plt.plot(wavelength**2, deltatheta3/(1.36e-3),'x', label = r'$\text{Dotiert},\; N=\qty{1.2e26}{\meter\tothe{-3}}, \; d = \qty{1,36}{\milli\meter}$')
-plt.plot(wavelength**2, deltatheta2/(1.296e-3),'x', label = r'$\text{Dotiert},\; N=\qty{2.8e26}{\meter\tothe{-3}}, \; d = \qty{5,11}{\milli\meter}$')
+plt.plot(wavelength**2, deltatheta3/(1.36e-3),'x', label = 'Probe 1')
+plt.plot(wavelength**2, deltatheta2/(1.296e-3),'x', label = 'Probe 2')
 
 
 plt.legend()

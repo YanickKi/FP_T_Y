@@ -44,7 +44,7 @@ Da die Probe bei der maximalen Feldstärke positioniert ist, wird in den folgend
 \subsection{Bestimmung der Winkeldifferenzen}
 \label{subsec:winkel}
 In Tablle \ref{tab:probe} sind die gemessenen Winkel in Abhängigkeit von der Wellenlänge aufgetragen. 
-Um nun den Rotaionswinkel pro Einheitslänge zu erhalten, wird der Betrag der Differenz der beiden Winkel bei den verschiedenen Polungen genommen und halbiert, so dass 
+Um nun den Rotationswinkel pro Einheitslänge zu erhalten, wird der Betrag der Differenz der beiden Winkel bei den verschiedenen Polungen genommen und halbiert, so dass 
 \begin{equation*}
     \symup{\Delta}\theta = \frac{1}{2} | \theta_1 - \theta_2 | 
 \end{equation*}
@@ -64,7 +64,7 @@ Dies auf die Länge der Probe normiert, ergibt die Abbilung \ref{fig:prob}.
     \begin{tabular}{S[table-format=1.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3] S[table-format=2.3]}
     \toprule
     & \multicolumn{2}{c}{Probe 1} & \multicolumn{2}{c}{Probe 2} & \multicolumn{2}{c}{Probe 3}\\
-    \cmidrule(lr){2-3}\cmidrule(lr){4-5} \cmidrule(lr){4-5}
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5} \cmidrule(lr){6-7}
     {$\lambda \mathbin{/} \unit{\micro\meter}$}
     & {$\theta_1$} & {$\theta_2$} & {$\theta_1$} & {$\theta_2$} & {$\theta_1$} & {$\theta_2$} \\
     \midrule
@@ -82,11 +82,11 @@ Dies auf die Länge der Probe normiert, ergibt die Abbilung \ref{fig:prob}.
 \end{table}
 \FloatBarrier
 \subsection{Berechnung der effektiven Masse der Elektronen}
-Um die effektive Masse der Elektronen $m^*$ zu bestimmen wird die Gleichung \eqref{TEMPLATE} gefittet.
+Um die effektive Masse der Elektronen $m^*$ zu bestimmen wird die Gleichung \eqref{eqn:theta} gefittet.
 Die Ausgleichsgerade nimmt dabei die Form 
-\begin{equation*}
-    \theta_\text{frei} = a \lambda^2 + b
-\end{equation*}
+\begin{equation}
+    \theta_\text{frei} = a \lambda^2 + b \label{eqn:pes}
+\end{equation}
 an, wobei a und b die Fitparameter sind.
 Fortan kann die effektive Masse gemäß
 \begin{equation}
@@ -94,30 +94,30 @@ Fortan kann die effektive Masse gemäß
 \end{equation}
 berechnet werden.
 Dabei ist $e_0$ die Elementarladung, $N$ die Donatorenkonzentration, $B$ die magnetische Feldstärke, $\epsilon_0$ die elektrische Feldkonstante,
-$c$ die Lichtgeschwindigkeit, $n$ der Brechungsindex von Gallium Arsenide und $a$ der Fitparameter aus Gleichung \eqref{eqn:mass}.
+$c$ die Lichtgeschwindigkeit, $n$ der Brechungsindex von Galliumarsenid und $a$ der Fitparameter aus Gleichung \eqref{eqn:pes}.
 Der dabei bei einer Wellenlänge von $\lambda = \qty{1.55}{\micro\metre}$ verwendete Brechungsindex von GaAs beträgt $n = 3.374$\cite{brechungsindex}.
-Dabei wird von dem auf eine Einheitslänge normierte Rotationswinkel der dotierten Probe der auf eine Einheitslänge normierte Rotationswinkel der undotierte Probe abgezogen,
+Dabei wird von dem auf eine Einheitslänge normierte Rotationswinkel der dotierten Probe der auf eine Einheitslänge normierte Rotationswinkel der undotierten Probe abgezogen,
 damit nur der Einfluss der freien Elektronen erfasst wird.
 \begin{figure}
     \centering
     \includegraphics{build/mass2.pdf}
     \caption{Berechneter und gefitteter Rotaionswinkel $\theta_\text{frei}$ in Abhängigkeit $\lambda^2$ für $
-    N=\qty{1.2e26}{\meter\tothe{-3}}, \; d = \qty{1,36}{\milli\meter}$.}
+    N=\qty{1.2e26}{\meter\tothe{-3}}, \; d = \qty{1,36}{\milli\meter}$ (Probe 1).}
     \label{fig:mass2}
 \end{figure}
-Hierbei muss angemerkt werden, dass der Messwert bei $\lambda = \qty{1.06}{\micro\metre}$ ausgelassen wurde, dieser für die undotierte Probe zu große Abweichungen zeigt
+Hierbei muss angemerkt werden, dass der Messwert bei $\lambda = \qty{1.06}{\micro\metre}$ ausgelassen wurde, da dieser für die undotierte Probe zu große Abweichungen zeigt
 und somit negative $ \theta_\text{frei}$ zustande kommen würden.
-Die Parameter ergeben sich für die Probe mit $N=\qty{1.2e26}{\meter\tothe{-3}}$ zu
+Die Parameter ergeben sich für die Probe 1 zu
 \begin{align*}
     a_1 &= \qty{4181114927968.37(141181194721678)}{\metre\tothe{-3}} \\
     b_1 &= \qty{7.15(6.53)}{\metre\tothe{-1}} \; \text{.}
 \end{align*}
-Für die Probe mit $N=\qty{2.8e26}{\meter\tothe{-3}}$ können die Parameter zu
+Für die Probe 2 können die Parameter zu
 \begin{align*}
     a_2 &= \qty{11428079332614.04(406840994387225)}{\metre\tothe{-3}} \\
     b_2 &= \qty{19.70(18.82)}{\metre\tothe{-1}} \; \text{.}
 \end{align*}
-berechent werden.
+berechnet werden.
 Mit Hilfe von Gleichung \eqref{eqn:mass} ergeben sich die effektiven Massen zu
 \begin{align*}
     m^*_1&= \qty{8.91(151)e-32}{\kilo\gram} \\
@@ -127,6 +127,6 @@ Mit Hilfe von Gleichung \eqref{eqn:mass} ergeben sich die effektiven Massen zu
     \centering
     \includegraphics{build/mass3.pdf}
     \caption{Berechneter und gefitteter Rotaionswinkel ausgehende von den freien Elektronen $\theta_\text{frei}$ in Abhängigkeit $\lambda^2$ für $
-    N=\qty{2.8e26}{\meter\tothe{-3}}, \; d = \qty{1,296}{\milli\meter}$.}
+    N=\qty{2.8e26}{\meter\tothe{-3}}, \; d = \qty{1,296}{\milli\meter}$ (Probe 2).}
     \label{fig:mass3}
 \end{figure}
