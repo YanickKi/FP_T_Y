@@ -4,8 +4,11 @@ all: build/main.pdf
 #build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
 #	TEXINPUTS=$$(pwd): python plot.py
 
+build/fits.pdf: data_scripts/lande_85.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/lande_85.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-#build/main.pdf: build/plot.pdf
+build/main.pdf: build/fits.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
