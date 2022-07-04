@@ -43,15 +43,15 @@ delta87 = 6.626e-34/(9.2740100783e-24*params87[0]**2) * errors87[0]
 
 print(B85[-1])
 
-Ez85 = g85 * 1.25663706212e-6 * B85[-1] + (g85 * 1.25663706212e-6 * B85[-1])**2 * (1-6)/(2.01e-24)
-Ez87 = g87 * 1.25663706212e-6 * B87[-1] + (g87 * 1.25663706212e-6 * B87[-1])**2 * (1-4)/(4.53e-24)
-deltaEz85 = 1.25663706212e-6 * B85[-1] + 2 * g85*(1.25663706212e-6 * B85[-1])**2 * (1-6)/(2.01e-24) * delta85 
-deltaEz87 = 1.25663706212e-6 * B87[-1] + 2 * g87*(1.25663706212e-6 * B87[-1])**2 * (1-4)/(4.53e-24) * delta87
+Ez85 = g85 *    9.2740100783e-24 * B85[-1] + (g85 *     9.2740100783e-24 * B85[-1])**2 * (1-6)/(2.01e-24)
+Ez87 = g87 *    9.2740100783e-24 * B87[-1] + (g87 *     9.2740100783e-24 * B87[-1])**2 * (1-4)/(4.53e-24)
+deltaEz85 =     9.2740100783e-24 * B85[-1] + 2 * g85*(  9.2740100783e-24 * B85[-1])**2 * (1-6)/(2.01e-24) * delta85 
+deltaEz87 =     9.2740100783e-24 * B87[-1] + 2 * g87*(  9.2740100783e-24 * B87[-1])**2 * (1-4)/(4.53e-24) * delta87
 
 
 print(f'Der Fitparameter a85 beträgt {params85[0]} pm {errors85[0]}')
 print(f'Der Fitparameter b85 beträgt {params85[1]} pm {errors85[1]}')
-print(f'Der Fitparameter a87 beträgt {params87[0]} pm {errors87[0]}')
+print(f'Der Fitparameter a87 beträgt {params87[0]} pm {errors87[0]}') 
 print(f'Der Fitparameter b87 beträgt {params87[1]} pm {errors87[1]}')
 print(f'g85 beträgt {g85} pm {delta85}')
 print(f'g87 beträgt {g87} pm {delta87}')
@@ -59,5 +59,5 @@ print(f'Der Kernspin von Rb85 ist {0.5*(2/g85 - 1)} pm {0.5 * 2*delta85/g85**2}'
 print(f'Der Kernspin von Rb87 ist {0.5*(2/g87 - 1)} pm {0.5 * 2*delta87/g87**2}')
 print(f'Maximale B85 ist {B85[-1]*10**6}')
 print(f'Maximale B87 ist {B87[-1]*10**6}')
-print(f'Die Zeemannaufspaltung Ez85 beträgt {Ez85*10**(9)} pm {deltaEz85*10**(9)}')
-print(f'Die Zeemannaufspaltung Ez85 beträgt {Ez87*10**(9)} pm {deltaEz87*10**(9)}')
+print(f'Die Zeemannaufspaltung Ez85 beträgt {Ez85*10**(9)/(1.602e-19)} pm {deltaEz85*10**(9)/(1.602e-19)}')
+print(f'Die Zeemannaufspaltung Ez85 beträgt {Ez87*10**(9)/(1.602e-19)} pm {deltaEz87*10**(9)/(1.602e-19)}')
