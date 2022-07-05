@@ -1,8 +1,13 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Bestimmung des vertikalen Magnetfeldes}
-Zunächst muss mittels Gleichung \eqref{TEMPLATE} die Feldstärke des vertikalen Magnetfeldes der Erde aus dem gemessenen Spulenstrom berechnet werden.
-Die Vertikalfeld-Spule hat einen Radius von $R = \qty{11.735}{\centi\metre}$ und eine Windungszahl von $N = 20$.\cite{TEMPLATE}
+Zunächst muss mittels der Gleichung
+\begin{equation*}
+    B = \mu_0 \frac{8N}{\sqrt{125}R}I
+\end{equation*} 
+die Feldstärke des vertikalen Magnetfeldes der Erde mittels des gemessenen Spulenstroms $I$ berechnet werden. \cite{leifi}
+Dabei sind $N$ die Anzahl an Windungen, $R$ der Radius der Spule und $\mu_0$ die magnetische Feldkonstante.
+Die Vertikalfeld-Spule hat einen Radius von $R = \qty{11.735}{\centi\metre}$ und eine Windungszahl von $N = 20$.\cite{sample}
 Somit lässt sich eine Feldstärke von 
 \begin{equation*}
     B_{\text{vertikal}} = \qty{34.79}{\micro\tesla}
@@ -40,7 +45,7 @@ In Tabelle \ref{tab:hphase} sind die gemessenen Feldstärken der horizontalen Fe
     \label{fig:fit}
     \includegraphics[width = 0.8 \textwidth]{build/fits.pdf}
 \end{figure}
-Um die Lande Faktoren der beiden Isotope zu bestimmen, wird die Gleichung \eqref{TEMPLATE} gefittet.
+Um die Lande Faktoren der beiden Isotope zu bestimmen, wird die Gleichung \eqref{eqn:magnetf} gefittet.
 Die Ausgleichsgerade besitzt die Form
 \begin{equation*}
     B =  af + b \; ,
@@ -65,8 +70,13 @@ Somit können die Lande Faktoren zu
 \end{align}
 bestimmt werden.
 \subsection{Bestimmung der Kernspins}
-Im Folgenden wird der Kernspins beider Isotope mit der Gleichung \eqref{TEMPLATE} bestimmt, wobei 
+Im Folgenden wird der Kernspins beider Isotope mit der Gleichung 
+\begin{equation}
+    \frac{1}{2}\left ( \frac{g_J}{g_F} - 1 \right ) \label{eqn:haha}
+\end{equation}
+bestimmt, wobei 
 $g_L  = 2 $ gilt.
+Die Gleichung \eqref{eqn:haha} folgt aus den Gleichungen \eqref{eqn:aa} und \eqref{eqn:bb}.
 Mit den Werten der Lande Faktoren \eqref{eqn:gf87} lassen sich die Kernspins zu 
 \begin{align*}
     I_{85} &= \num{2.53(4)} \\ 
