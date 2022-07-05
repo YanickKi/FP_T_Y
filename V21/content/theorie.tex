@@ -14,12 +14,12 @@ auf die im folgenden eingegangen wird. Die Energieaufspaltungen der Niveaus der 
 \begin{figure}
     \centering
     \includegraphics[width = 0.78\textwidth]{pics/energielevel.png}
-    \caption{Aufspaltung der Energieniveaus des $^2S_{\frac{1}{2}}$ und des $^2P_{\frac{1}{2}}$ Zustands durch die drei Effekte.\cite{Optisches pumpen}}
+    \caption{Aufspaltung der Energieniveaus des $^2S_{\frac{1}{2}}$ und des $^2P_{\frac{1}{2}}$ Zustands durch die drei Effekte.\cite{op}}
     \label{pic:en}
 \end{figure}
 
 \subsubsection{LS-Kopplung}
-Das Elektron verspürt im Ruhesystem ein Magnetfeld, welches durch den geladenen Kern induziert wird der sich um das Elektron bewegt.
+Das Elektron verspürt seinem Ruhesystem ein Magnetfeld, welches durch den geladenen Kern entsteht der sich um das Elektron bewegt.
 Wird dem Modell der Spin des Elektrons hinzugefügt, spalten die vorherigen Energieniveaus nach dem jeweiligen Gesamtdrehimpuls auf.
 Der Gesamtdrehimpuls $J$ setzt sich aus dem Bahndrehimpuls und dem Spin der Hüllenelektronen zusammen und geht von $|L - S|$ bis $|L + S|$.
 In dem Grundzustand ergibt sich für beide Isotope $J = S =$\sfrac{1}{2}, da nur ein Hüllenelektron vorhanden ist.
@@ -44,18 +44,20 @@ $\symup{\Delta} E_{Hyp}$ beschreibt hier die Energieaufspaltung zwischen zwei Ni
 Des weiteren ist $\mu_B = $\sfrac{$e \hbar$}{$2m_e$} das Bohrsche Magneton und $g_F$ das gyromagnetische Verhältniss, welches durch
 \begin{equation}
     g_F = g_J \frac{F(F+1)+J(J+1)-I(I+1)}{2F(F+1)}
+    \label{eqn:aa}
 \end{equation}
 mit
 \begin{equation}
-    g_J = \frac{J(J+1)+S(S+1)-L(L+1)}{2J(J+1)}
+    g_J = 1 + \frac{J(J+1)+S(S+1)-L(L+1)}{2J(J+1)}
+    \label{eqn:bb}
 \end{equation}
-berechnet werden kann.
+berechnet werden kann.\cite{dem}
 
 \subsection{Optisches Pumpen}
 \begin{figure}
     \centering
     \includegraphics[width = 0.78\textwidth]{pics/pumpen.png}
-    \caption{Schematische Darstellung des optischen Pumpens am Wasserstoffatom.\cite{Optisches pumpen}}
+    \caption{Schematische Darstellung des optischen Pumpens am Wasserstoffatom.\cite{op}}
     \label{pic:pump}
 \end{figure}
 In Abbildung \ref{pic:pump} wird das optische Pumpen schematisch am Wasserstoffatom dargestellt.
@@ -66,22 +68,23 @@ rechtszirkular-polarisiertes Licht erzeugt Übergänge mit $\symup{\Delta{M_F}} 
 mit $\symup{\Delta{M_F}} = 0$.
 
 Die Energiedifferenzen, welche durch die Hyperfeinstruktur und den Zeemann-Effekt auftreten, sind klein genug um die Niveaus bei Raumtemperatur als Äquivalent anzusehen.
-Wird also auf ein Atom rechts-polarisiertes Licht, welches der Energie des D1-Übergangs entspricht, gestrahlt und ein Magnetfeld entlang der selben Richtung angelegt, kommt es zuerst zu einer Absorption mit $\symup{\Delta{M_F}} = +1$.
+Wird also auf ein Atom rechts-polarisiertes Licht, welches der Energie des $D_1$-Übergangs entspricht, gestrahlt und ein Magnetfeld entlang der selben Richtung angelegt, kommt es zuerst zu einer Absorption mit $\symup{\Delta{M_F}} = +1$.
 Die Absorption kann nur unter dieser Bedingung stattfinden, sodass Elektronen welche kein höheres $M_F$ erreichen können kein Photon absorbieren können.
 Bei Emissionsevents kommt es im Durchschnitt zu $\symup{\Delta{M_F}} = 0$. Da auch photonen emittiert werden von einem Übergang mit $\symup{\Delta{M_F}} = -1$, können diese zu
 stimulierter Emission führen. Aufgrund der statistischen Verteilung der magnetischen Quantenzahlen wird dennoch nach mehrfachen wiederholen von Absorption und Emission ein Zustand erreicht
 in dem sich alle Elektronen in dem Grundzustand mit dem höchsten Wert für $M_F$ befinden. Da nun keine Absorption mehr stattfinden kann, wirkt das Gas durchsichtig für das Licht und wird als polarisiert bezeichnet.
 Bei entfernen des Magnetfeldes oder der Lichtquelle wird die Polarisation des Gases verschwinden. Entspricht die Energie der Photonen genau der Energiedifferenz der Zeemann-Aufspaltung kommt es zu
 Resonanz und die stimulierte Emission steigt. Es bildet sich ein Gleichgewicht, sodass das polarisierte Gas bei der Resonanz an Transparenz verliert.
-Dies kann zum Beispiel wie in Abbildung \ref{pic:resonanz} über das variieren des Magnetfelds erreicht werden. Die Resonanz tritt dann bei einem Magnetfeld von 
+Dies kann zum Beispiel wie in Abbildung \ref{pic:resonanz} über das variieren des Magnetfelds bei einer bestimmten RF-frequenz erreicht werden. Die Resonanz tritt dann bei einem Magnetfeld von 
 \begin{equation}
     B_m = \frac{\hbar \omega_{RF}}{g_F \mu_B}
+    \label{eqn:magnetf}
 \end{equation}
 auf.
 \begin{figure}
     \centering
     \includegraphics[width = 0.78\textwidth]{pics/pumpen.png}
-    \caption{Transparenz eines polarisierten Gases in Abhängigkeit vom Magnetfeld.\cite{V21}}
+    \caption{Transparenz eines polarisierten Gases in Abhängigkeit vom Magnetfeld.\cite{sample}}
     \label{pic:resonanz}
 \end{figure}
 
