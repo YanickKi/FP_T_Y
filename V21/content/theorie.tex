@@ -10,7 +10,7 @@ Rubidium gehört zu der Gruppe der Alkali-Metalle und hat die
 Elektronenkonfiguration $[Kr]\,5s^1$. 
 Da die Alkali-Metalle nur ein Elektron in einer unabgeschlossenen Schale besitzen, können diese gut durch ein ein-Elektron-Atom Modell genähert werden.
 In einfachster Darstellung ist die Energie dieser ein-Elektron-Atome nur von der Hauptquantenzahl abhängig, jedoch gibt es auch kleinere Energiekorrekturen
-auf die im folgenden eingegangen wird. Die Energieaufspaltungen der Niveaus der folgenden Korrekturen ist in Abbildung \ref{pic:en} dargestellt.
+auf die im Folgenden eingegangen wird. Die Energieaufspaltungen der Niveaus der folgenden Korrekturen ist in Abbildung \ref{pic:en} dargestellt.
 \begin{figure}
     \centering
     \includegraphics[width = 0.78\textwidth]{pics/energielevel.png}
@@ -19,7 +19,7 @@ auf die im folgenden eingegangen wird. Die Energieaufspaltungen der Niveaus der 
 \end{figure}
 
 \subsubsection{LS-Kopplung}
-Das Elektron verspürt seinem Ruhesystem ein Magnetfeld, welches durch den geladenen Kern entsteht der sich um das Elektron bewegt.
+Das Elektron verspürt in seinem Ruhesystem ein Magnetfeld, welches durch den geladenen Kern entsteht, der sich um das Elektron bewegt.
 Wird dem Modell der Spin des Elektrons hinzugefügt, spalten die vorherigen Energieniveaus nach dem jeweiligen Gesamtdrehimpuls auf.
 Der Gesamtdrehimpuls $J$ setzt sich aus dem Bahndrehimpuls und dem Spin der Hüllenelektronen zusammen und geht von $|L - S|$ bis $|L + S|$.
 In dem Grundzustand ergibt sich für beide Isotope $J = S =$\sfrac{1}{2}, da nur ein Hüllenelektron vorhanden ist.
@@ -38,10 +38,11 @@ weshalb der quadratische Zeemann-Effekt betrachtet wird.
 Durch Störungstheorie ergibt sich der Energieunterschied
 \begin{equation}
     \symup{\Delta} E_Z = g_F \mu_B B + (g_F \mu_B B)^2 \frac{1-2M_F}{\symup{\Delta} E_{Hyp}}
+    \label{eqn:zeem}
 \end{equation}
 zwischen dem Grundniveau der Hyperfeinstruktur und dem Energielevel mit magnetischer Quantenzahl $M_F$. 
-$\symup{\Delta} E_{Hyp}$ beschreibt hier die Energieaufspaltung zwischen zwei Niveaus der Hyperfeinstruktur mit Gesamtdrehimpuls $F$ und $F+1$.
-Des weiteren ist $\mu_B = $\sfrac{$e \hbar$}{$2m_e$} das Bohrsche Magneton und $g_F$ das gyromagnetische Verhältniss, welches durch
+Die Energieaufspaltung zwischen zwei Niveaus der Hyperfeinstruktur mit Gesamtdrehimpuls $F$ und $F+1$ ist hier $\symup{\Delta} E_{\text{Hyp}}$.
+Des weiteren ist $\mu_B = $\sfrac{$e \hbar$}{$2m_e$} das Bohrsche Magneton und $g_F$ das gyromagnetische Verhältnis, welches durch
 \begin{equation}
     g_F = g_J \frac{F(F+1)+J(J+1)-I(I+1)}{2F(F+1)}
     \label{eqn:aa}
@@ -53,7 +54,7 @@ mit
 \end{equation}
 berechnet werden kann.\cite{dem}
 
-\subsection{Optisches Pumpen}
+\subsection{Das Prinzip des optischen Pumpens}
 \begin{figure}
     \centering
     \includegraphics[width = 0.78\textwidth]{pics/pumpen.png}
@@ -67,12 +68,12 @@ Dabei tritt bei spontaner Emission ein zufälliges $\symup{\Delta{M_F}}$ auf. Be
 rechtszirkular-polarisiertes Licht erzeugt Übergänge mit $\symup{\Delta{M_F}} = +1$, linkszirkulares mit $\symup{\Delta{M_F}} = -1$ und linear polarisiertes
 mit $\symup{\Delta{M_F}} = 0$.
 
-Die Energiedifferenzen, welche durch die Hyperfeinstruktur und den Zeemann-Effekt auftreten, sind klein genug um die Niveaus bei Raumtemperatur als Äquivalent anzusehen.
+Die Energiedifferenzen, welche durch die Hyperfeinstruktur und den Zeemann-Effekt auftreten, sind klein genug um die Niveaus bei Raumtemperatur als äquivalent anzusehen.
 Wird also auf ein Atom rechts-polarisiertes Licht, welches der Energie des $D_1$-Übergangs entspricht, gestrahlt und ein Magnetfeld entlang der selben Richtung angelegt, kommt es zuerst zu einer Absorption mit $\symup{\Delta{M_F}} = +1$.
 Die Absorption kann nur unter dieser Bedingung stattfinden, sodass Elektronen welche kein höheres $M_F$ erreichen können kein Photon absorbieren können.
-Bei Emissionsevents kommt es im Durchschnitt zu $\symup{\Delta{M_F}} = 0$. Da auch photonen emittiert werden von einem Übergang mit $\symup{\Delta{M_F}} = -1$, können diese zu
+Bei Emissionsevents kommt es im Durchschnitt zu $\symup{\Delta{M_F}} = 0$. Da auch Photonen emittiert werden von einem Übergang mit $\symup{\Delta{M_F}} = -1$, können diese zu
 stimulierter Emission führen. Aufgrund der statistischen Verteilung der magnetischen Quantenzahlen wird dennoch nach mehrfachen wiederholen von Absorption und Emission ein Zustand erreicht
-in dem sich alle Elektronen in dem Grundzustand mit dem höchsten Wert für $M_F$ befinden. Da nun keine Absorption mehr stattfinden kann, wirkt das Gas durchsichtig für das Licht und wird als polarisiert bezeichnet.
+in dem sich alle Elektronen in dem Grundzustand mit dem höchsten Wert für $\symup{M_F}$ befinden. Da nun keine Absorption mehr stattfinden kann, wirkt das Gas durchsichtig für das Licht und wird als polarisiert bezeichnet.
 Bei entfernen des Magnetfeldes oder der Lichtquelle wird die Polarisation des Gases verschwinden. Entspricht die Energie der Photonen genau der Energiedifferenz der Zeemann-Aufspaltung kommt es zu
 Resonanz und die stimulierte Emission steigt. Es bildet sich ein Gleichgewicht, sodass das polarisierte Gas bei der Resonanz an Transparenz verliert.
 Dies kann zum Beispiel wie in Abbildung \ref{pic:resonanz} über das variieren des Magnetfelds bei einer bestimmten RF-frequenz erreicht werden. Die Resonanz tritt dann bei einem Magnetfeld von 
